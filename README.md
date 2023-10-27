@@ -1,4 +1,5 @@
 # Requirement
+## Library
 ・emoji
 
 ・demoji
@@ -10,3 +11,6 @@
 ・bitermplus
 
 ・ja_stopword_remover
+
+## dictionary
+・mecab-ipadic-NEologd
