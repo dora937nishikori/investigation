@@ -12,5 +12,5 @@
 
 ・ja_stopword_remover
 
-## dictionary
+## Dictionary
 ・mecab-ipadic-NEologd
