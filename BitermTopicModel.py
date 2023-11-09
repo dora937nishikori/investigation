@@ -23,14 +23,14 @@ biterms = btm.get_biterms(docs_vec)
 
 # INITIALIZING AND RUNNING MODEL
 model = btm.BTM(
-    X, vocabulary, seed=12321, T=5, M=20, alpha=0.8, beta=0.8)
+    X, vocabulary, seed=100, T=15, M=10, alpha=0.92, beta=0.14)
 model.fit(biterms, iterations=20)
 p_zd = model.transform(docs_vec)
 
 
 # METRICS
-perplexity = btm.perplexity(model.matrix_topics_words_, p_zd, X, T=5)
-coherence = btm.coherence(model.matrix_topics_words_, X, M=20)
+perplexity = btm.perplexity(model.matrix_topics_words_, p_zd, X, T=15)
+coherence = btm.coherence(model.matrix_topics_words_, X, M=10)
 # or
 #perplexity = model.perplexity_
 #coherence = model.coherence_
