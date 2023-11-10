@@ -3,7 +3,7 @@ import MeCab
 """MeCab + NEologd"""
 
 """MeCab + NEologd + 分かち書き"""
-text = '    かわいいヒカキンには好感持てるけど'
+text = '店舗を作るんじゃなくてそれなりに誰でも手に入れられる商品を作ってくれるところに言葉に上手く出来ない優しさを感じる'
 #分かち書き
 #tagger = MeCab.Tagger(r'-Owakati -d "C:\mecab-ipadic-neologd"') #分かち書きと辞書の指定を同時にやるだけ
 
@@ -17,13 +17,14 @@ removed = [] #空白連結
 for parse in parses:
     #空白区切り
     tmp = parse.split('\t')
+    print(tmp)
     #EOS、空白行削除
     if len(tmp) > 1:
         morphs.append(parse.split('\t'))
 
 #品詞抽出
 for morph in morphs:
-    if '名詞' in morph[1] or '動詞' in morph[1] or '形容詞' in morph[1]: 
+    if '名詞' in morph[1]: 
         removed.append(morph[0])
 
 print(' '.join(removed))
