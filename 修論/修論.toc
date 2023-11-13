@@ -1,15 +1,15 @@
 \contentsline {part}{第I部\hspace {1\zw }はじめに}{3}{}%
 \contentsline {section}{\numberline {1}研究背景}{3}{}%
-\contentsline {section}{\numberline {2}関連研究}{3}{}%
-\contentsline {subsection}{\numberline {2.1}関連研究1}{3}{}%
-\contentsline {subsection}{\numberline {2.2}関連研究2}{3}{}%
-\contentsline {section}{\numberline {3}研究目的}{3}{}%
-\contentsline {part}{第II部\hspace {1\zw }提案手法}{4}{}%
-\contentsline {section}{\numberline {4}トピックモデル}{4}{}%
-\contentsline {subsection}{\numberline {4.1}Latent Dirichlet Allocation}{4}{}%
-\contentsline {subsection}{\numberline {4.2}Biterm Topic Model}{4}{}%
-\contentsline {section}{\numberline {5}提案システム}{4}{}%
-\contentsline {subsection}{\numberline {5.1}データ収集}{4}{}%
-\contentsline {subsection}{\numberline {5.2}前処理手法}{4}{}%
-\contentsline {part}{第III部\hspace {1\zw }実験結果}{5}{}%
-\contentsline {section}{\numberline {6}実験目的、仮説}{5}{}%
+\contentsline {section}{\numberline {2}関連研究}{4}{}%
+\contentsline {subsection}{\numberline {2.1}関連研究1}{4}{}%
+\contentsline {subsection}{\numberline {2.2}関連研究2}{4}{}%
+\contentsline {section}{\numberline {3}研究目的}{4}{}%
+\contentsline {part}{第II部\hspace {1\zw }提案手法}{5}{}%
+\contentsline {section}{\numberline {4}トピックモデル}{5}{}%
+\contentsline {subsection}{\numberline {4.1}Latent Dirichlet Allocation}{5}{}%
+\contentsline {subsection}{\numberline {4.2}Biterm Topic Model}{5}{}%
+\contentsline {section}{\numberline {5}提案システム}{5}{}%
+\contentsline {subsection}{\numberline {5.1}データ収集}{5}{}%
+\contentsline {subsection}{\numberline {5.2}前処理手法}{5}{}%
+\contentsline {part}{第III部\hspace {1\zw }実験結果}{6}{}%
+\contentsline {section}{\numberline {6}実験目的、仮説}{6}{}%
