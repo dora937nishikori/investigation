@@ -1,9 +1,9 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  13 NOV 2023 21:39
+This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.11.7)  15 NOV 2023 02:32
  restricted system commands enabled.
 **c:/Users/937do/Documents/investigation/修論/修論
 (c:/Users/937do/Documents/investigation/修論/修論.tex
-LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-10-23>
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-01>
 Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
 Lua module: lualibs 2023-07-13 2.76 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2023-07-13 2.76 ConTeXt Lua libraries -- extended collection.
@@ -295,7 +295,7 @@ LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 ) (c:/texlive/2023/texmf-dist/tex/luatex/luatexja/patches/lltjcore.sty
 Package: lltjcore 2023-02-26 Patch to LaTeX2e Kernel for LuaTeX-ja
  (c:/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2023-10-23 L3 programming layer (loader) 
+Package: expl3 2023-11-01 L3 programming layer (loader) 
  (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
 File: l3backend-luatex.def 2023-10-23 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count194
@@ -475,37 +475,7 @@ LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <14.4> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 46.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 13.85594pt on input line 46.
-(load cache: extra_haranoajigothic-medium.luc) (./修論.toc
-LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 1.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 1.
-LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <12> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 1.
-LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <12> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 1.
-(load cache: extra_lmroman10-bold.luc)
-LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 2.
-LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 4.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 4.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 4.
-LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 4.
-)
+(load cache: extra_haranoajigothic-medium.luc) (./修論.toc)
 \tf@toc=\write3
 
 \openout3 = 修論.toc
@@ -520,27 +490,40 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 19.95642pt on input line 49.
  [3
 
-] [4] [5] [6] (./修論.aux)
+]
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 84.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 84.
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <12> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 84.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 84.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <12> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 84.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 84.
+ [4] [5] [6] (./修論.aux)
  ***********
-LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-10-23>
+LaTeX2e <2023-11-01>
+L3 programming layer <2023-11-01>
  ***********
 )
 
 Here is how much of LuaTeX's memory you used:
- 3282 strings out of 476729
- 125244,1977958 words of node,token memory allocated
+ 3271 strings out of 476603
+ 156562,1977958 words of node,token memory allocated
  792 words of node memory still in use:
    7 hlist, 1 vlist, 4 rule, 2 glue, 3 kern, 1 glyph, 129 attribute, 49 glue_spec, 20 attribute_list, 1 write, 9 user_defined nodes
-   avail lists: 1:16,2:35850,3:236,4:127,5:52,6:32,7:4044,8:1,9:1804,10:40,11:10
- 25032 multiletter control sequences out of 65536+600000
- 45 fonts using 44142143 bytes
+   avail lists: 1:21,2:43702,3:270,4:111,5:58,6:25,7:4932,8:4,9:2210,10:45,11:10
+ 25147 multiletter control sequences out of 65536+600000
+ 31 fonts using 32038823 bytes
  125i,5n,128p,1806b,203s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-Output written on 修論.pdf (7 pages, 99548 bytes).
+<c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf>
+Output written on 修論.pdf (7 pages, 103146 bytes).
 
-PDF statistics: 72 PDF objects out of 1000 (max. 8388607)
- 43 compressed objects within 1 object stream
+PDF statistics: 61 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 131072)
  1 words of extra memory for PDF output out of 10000 (max. 100000000)
 

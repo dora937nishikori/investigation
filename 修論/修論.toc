@@ -1,7 +1,7 @@
 \contentsline {part}{第I部\hspace {1\zw }はじめに}{3}{}%
 \contentsline {section}{\numberline {1}研究背景}{3}{}%
 \contentsline {section}{\numberline {2}関連研究}{4}{}%
-\contentsline {subsection}{\numberline {2.1}関連研究1}{4}{}%
+\contentsline {subsection}{\numberline {2.1}機械学習を用いた自然言語処理による商品レビューの評価[1]}{4}{}%
 \contentsline {subsection}{\numberline {2.2}関連研究2}{4}{}%
 \contentsline {section}{\numberline {3}研究目的}{4}{}%
 \contentsline {part}{第II部\hspace {1\zw }提案手法}{5}{}%
