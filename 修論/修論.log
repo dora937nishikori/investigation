@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  16 NOV 2023 02:30
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  16 NOV 2023 18:26
  restricted system commands enabled.
 **c:/Users/937do/Documents/investigation/修論/修論
 (c:/Users/937do/Documents/investigation/修論/修論.tex
@@ -762,7 +762,13 @@ File: system1.png Graphic file (type png)
 <use system1.png>
 Package luatex.def Info: system1.png  used on input line 106.
 (luatex.def)             Requested size: 284.52756pt x 292.8079pt.
- [4<./system1.png>] [5] [6] [7] [8] (./修論.aux)
+ [4<./system1.png>]
+<table1.png, id=111, 470.50781pt x 157.33781pt>
+File: table1.png Graphic file (type png)
+<use table1.png>
+Package luatex.def Info: table1.png  used on input line 160.
+(luatex.def)             Requested size: 398.33858pt x 133.20479pt.
+ [5] [6<./table1.png>] [7] [8] (./修論.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
@@ -772,19 +778,19 @@ Package rerunfilecheck Info: File `修論.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 12368 strings out of 476729
+ 12381 strings out of 476729
  156562,1977958 words of node,token memory allocated
- 1127 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 225 attribute, 57 glue_spec, 32 attribute_list, 1 write, 14 user_defined nodes
-   avail lists: 1:28,2:43902,3:278,4:247,5:82,6:54,7:4940,8:36,9:2225,10:45,11:15
- 33862 multiletter control sequences out of 65536+600000
+ 1199 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 258 attribute, 57 glue_spec, 35 attribute_list, 1 write, 14 user_defined nodes
+   avail lists: 1:28,2:45106,3:313,4:247,5:98,6:54,7:5296,8:36,9:2315,10:45,11:15
+ 33871 multiletter control sequences out of 65536+600000
  47 fonts using 44266095 bytes
- 125i,8n,128p,1806b,358s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,8n,128p,1806b,374s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 修論.pdf (9 pages, 262016 bytes).
+Output written on 修論.pdf (9 pages, 361933 bytes).
 
-PDF statistics: 189 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 131072)
+PDF statistics: 193 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 131072)
  121 words of extra memory for PDF output out of 10000 (max. 100000000)
 
