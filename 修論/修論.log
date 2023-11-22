@@ -1,9 +1,9 @@
-This is LuaHBTeX, Version 1.17.0 (TeX Live 2023)  (format=lualatex 2023.11.7)  22 NOV 2023 02:57
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  22 NOV 2023 19:12
  restricted system commands enabled.
 **c:/Users/937do/Documents/investigation/修論/修論
 (c:/Users/937do/Documents/investigation/修論/修論.tex
-LaTeX2e <2023-11-01>
-L3 programming layer <2023-11-01>
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-10-23>
 Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
 Lua module: lualibs 2023-07-13 2.76 ConTeXt Lua standard libraries.
 Lua module: lualibs-extended 2023-07-13 2.76 ConTeXt Lua libraries -- extended collection.
@@ -295,7 +295,7 @@ LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
 ) (c:/texlive/2023/texmf-dist/tex/luatex/luatexja/patches/lltjcore.sty
 Package: lltjcore 2023-02-26 Patch to LaTeX2e Kernel for LuaTeX-ja
  (c:/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2023-11-01 L3 programming layer (loader) 
+Package: expl3 2023-10-23 L3 programming layer (loader) 
  (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-luatex.def
 File: l3backend-luatex.def 2023-10-23 L3 backend support: PDF output (LuaTeX)
 \l__color_backend_stack_int=\count194
@@ -563,7 +563,7 @@ LaTeX Info: Redefining \] on input line 2954.
 ) (c:/texlive/2023/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2022/06/29 v1.29 mathematical typesetting tools
  (c:/texlive/2023/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count299
 \calc@Bcount=\count300
 \calc@Adimen=\dimen184
@@ -783,31 +783,31 @@ Package luatex.def Info: images/fig3.png  used on input line 190.
 <images/table2.png, id=157, 255.20343pt x 144.54pt>
 File: images/table2.png Graphic file (type png)
 <use images/table2.png>
-Package luatex.def Info: images/table2.png  used on input line 207.
+Package luatex.def Info: images/table2.png  used on input line 217.
 (luatex.def)             Requested size: 255.2028pt x 144.53963pt.
- [7<./images/fig3.png>] [8<./images/table2.png>] [9] [10] [11] (./修論.aux)
+ [7<./images/fig3.png>] [8<./images/table2.png>] [9] [10] [11] [12] (./修論.aux)
  ***********
-LaTeX2e <2023-11-01>
-L3 programming layer <2023-11-01>
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-10-23>
  ***********
 Package rerunfilecheck Info: File `修論.out' has not changed.
 (rerunfilecheck)             Checksum: 15D28491F203D87970FCDFF52FFDBC8F;2613.
 )
 
 Here is how much of LuaTeX's memory you used:
- 12428 strings out of 476603
+ 12430 strings out of 476729
  195707,1977958 words of node,token memory allocated
- 1300 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 302 attribute, 58 glue_spec, 39 attribute_list, 1 write, 14 user_defined nodes
-   avail lists: 1:27,2:55739,3:339,4:328,5:101,6:69,7:5899,8:36,9:2588,10:45,11:17
- 34022 multiletter control sequences out of 65536+600000
+ 1324 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 313 attribute, 58 glue_spec, 40 attribute_list, 1 write, 14 user_defined nodes
+   avail lists: 1:29,2:55727,3:339,4:328,5:101,6:70,7:5899,8:36,9:2588,10:45,11:17
+ 33897 multiletter control sequences out of 65536+600000
  47 fonts using 44266095 bytes
  125i,8n,128p,1806b,376s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 修論.pdf (12 pages, 565106 bytes).
+Output written on 修論.pdf (13 pages, 569020 bytes).
 
-PDF statistics: 243 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 131072)
+PDF statistics: 247 PDF objects out of 1000 (max. 8388607)
+ 197 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 131072)
  161 words of extra memory for PDF output out of 10000 (max. 100000000)
 
