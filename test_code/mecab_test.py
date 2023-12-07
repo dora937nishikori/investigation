@@ -3,7 +3,7 @@ import MeCab
 """MeCab + NEologd"""
 
 """MeCab + NEologd + 分かち書き"""
-text = '店舗を作るんじゃなくてそれなりに誰でも手に入れられる商品を作ってくれるところに言葉に上手く出来ない優しさを感じる'
+text = '聖女の魔力は万能です'
 #分かち書き
 #tagger = MeCab.Tagger(r'-Owakati -d "C:\mecab-ipadic-neologd"') #分かち書きと辞書の指定を同時にやるだけ
 
