@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  12 DEC 2023 18:47
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  13 DEC 2023 02:52
  restricted system commands enabled.
 **c:/Users/937do/Documents/investigation/修論/修論
 (c:/Users/937do/Documents/investigation/修論/修論.tex
@@ -798,17 +798,18 @@ File: images/前処理適用.png Graphic file (type png)
 Package luatex.def Info: images/前処理適用.png  used on input line 344.
 (luatex.def)             Requested size: 412.56496pt x 74.67407pt.
  [13<./images/前処理適用.png>]
-<images/形態素解析.drawio.png, id=237, 723.70375pt x 362.35374pt>
+<images/形態素解析.drawio.png, id=235, 723.70375pt x 362.35374pt>
 File: images/形態素解析.drawio.png Graphic file (type png)
 <use images/形態素解析.drawio.png>
-Package luatex.def Info: images/形態素解析.drawio.png  used on input line 400.
+Package luatex.def Info: images/形態素解析.drawio.png  used on input line 399.
 (luatex.def)             Requested size: 415.4104pt x 207.99239pt.
-<images/ストップワード.drawio.png, id=238, 121.45375pt x 61.22874pt>
-File: images/ストップワード.drawio.png Graphic file (type png)
-<use images/ストップワード.drawio.png>
-Package luatex.def Info: images/ストップワード.drawio.png  used on input line 407.
-(luatex.def)             Requested size: 121.45343pt x 61.22858pt.
- [14<./images/形態素解析.drawio.png>] [15<./images/ストップワード.drawio.png>] [16] (./修論.aux)
+ [14<./images/形態素解析.drawio.png>]
+<images/文章生成.drawio.png, id=244, 272.01625pt x 31.11626pt>
+File: images/文章生成.drawio.png Graphic file (type png)
+<use images/文章生成.drawio.png>
+Package luatex.def Info: images/文章生成.drawio.png  used on input line 433.
+(luatex.def)             Requested size: 272.01558pt x 31.11617pt.
+ [15<./images/文章生成.drawio.png>] [16] (./修論.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
@@ -820,14 +821,14 @@ Package rerunfilecheck Info: File `修論.out' has not changed.
 Here is how much of LuaTeX's memory you used:
  12503 strings out of 476729
  195704,1977958 words of node,token memory allocated
- 1372 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 335 attribute, 58 glue_spec, 42 attribute_list, 1 write, 14 user_defined nodes
-   avail lists: 1:30,2:55859,3:348,4:380,5:108,6:76,7:5926,8:36,9:2603,10:45,11:49
+ 1420 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 357 attribute, 58 glue_spec, 44 attribute_list, 1 write, 14 user_defined nodes
+   avail lists: 1:30,2:55835,3:348,4:380,5:108,6:76,7:5926,8:36,9:2603,10:45,11:49
  33945 multiletter control sequences out of 65536+600000
  47 fonts using 44266095 bytes
- 125i,10n,128p,1806b,425s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 125i,11n,128p,1806b,425s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 修論.pdf (17 pages, 697754 bytes).
+Output written on 修論.pdf (17 pages, 698245 bytes).
 
 PDF statistics: 316 PDF objects out of 1000 (max. 8388607)
  253 compressed objects within 3 object streams
