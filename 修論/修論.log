@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  14 DEC 2023 13:33
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  15 DEC 2023 00:41
  restricted system commands enabled.
 **c:/Users/937do/Documents/investigation/修論/修論
 (c:/Users/937do/Documents/investigation/修論/修論.tex
@@ -804,11 +804,11 @@ File: images/形態素解析.drawio.png Graphic file (type png)
 Package luatex.def Info: images/形態素解析.drawio.png  used on input line 399.
 (luatex.def)             Requested size: 415.4104pt x 207.70296pt.
  [14<./images/形態素解析.drawio.png>] [15]
-<images/文章生成.drawio.png, id=249, 3267.20625pt x 1611.01875pt>
+<images/文章生成.drawio.png, id=249, 3267.20625pt x 1711.39375pt>
 File: images/文章生成.drawio.png Graphic file (type png)
 <use images/文章生成.drawio.png>
 Package luatex.def Info: images/文章生成.drawio.png  used on input line 440.
-(luatex.def)             Requested size: 415.4104pt x 204.81834pt.
+(luatex.def)             Requested size: 415.4104pt x 217.57962pt.
  [16<./images/文章生成.drawio.png>] [17] [18] (./修論.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
@@ -828,7 +828,7 @@ Here is how much of LuaTeX's memory you used:
  47 fonts using 44266095 bytes
  125i,11n,128p,1806b,425s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 修論.pdf (19 pages, 1122103 bytes).
+Output written on 修論.pdf (19 pages, 1155086 bytes).
 
 PDF statistics: 325 PDF objects out of 1000 (max. 8388607)
  260 compressed objects within 3 object streams
