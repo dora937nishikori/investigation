@@ -9,11 +9,11 @@ def tokenize_japanese(text):
 
 # 任意の5つの文章をリストに入力
 texts = [
-    "任意の文章1",
-    "任意の文章2",
-    "任意の文章3",
-    "任意の文章4",
-    "任意の文章5"
+    "ヒカキン、絶対好き！発売の味噌ラーメン、楽しみ！大好きな味噌、Hikakinと一緒だ！",
+    "今日、セブンで店員から元気をもらった！ヒカキンのYouTube活動、ラーメンへの努力、Hikakin最高！",
+    "ヒカキン、尊敬してる。Youtuberじゃなくてもラーメンへの努力を応援！絶対好き！",
+    "ヒカキン報告！YouTubeでラーメン商品紹介、楽しみ！康平キン、好きなYoutuberだ！",
+    "Hikakinがセブンイレブンのみそラーメン発注応援！普通のコンビニに行列、紹介さい！"
 ]
 
 # これらの文章のTF-IDFベクトルを計算
@@ -25,7 +25,7 @@ with open('pre_misokin_original.csv', 'r', encoding = 'utf-8') as file:
     reader = csv.reader(file)
 
     # 出力CSVファイルを準備
-    with open('tf-idf_output.csv', 'w', newline='', encoding = 'utf-8') as outfile:
+    with open('tf-idf_output1218.csv', 'w', newline='', encoding = 'utf-8') as outfile:
         writer = csv.writer(outfile)
 
         for row in reader:
