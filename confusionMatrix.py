@@ -2,8 +2,8 @@ import pandas as pd
 from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, recall_score, f1_score
 
 # CSVファイルのパス
-actual_data_path = 'Misokin\正解データ.csv'
-predicted_data_path = 'Misokin\BERT予測データ.csv'
+actual_data_path = 'Misokin\みそきん正解データ.csv'
+predicted_data_path = 'Misokin\TF-IDF予測データ.csv'
 
 # CSVファイルからデータを読み込む
 actual_data = pd.read_csv(actual_data_path)

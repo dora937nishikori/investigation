@@ -23,7 +23,7 @@ biterms = btm.get_biterms(docs_vec)
 
 # INITIALIZING AND RUNNING MODEL
 model = btm.BTM(
-    X, vocabulary, seed=100, T=5, M=10, alpha=0.92, beta=0.14)
+    X, vocabulary, seed=3, T=5, M=10, alpha=0.92, beta=0.14)
 model.fit(biterms, iterations=20)
 p_zd = model.transform(docs_vec)
 

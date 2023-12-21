@@ -5,7 +5,7 @@ import pandas as pd
 def main():
     # テキストファイルの読み込み
     # ここではファイル名を 'wakachi_text.txt' と仮定します
-    file_path = 'pre_misokin_original.txt'
+    file_path = 'remove_pre_misokin_original.txt'
     with open(file_path, 'r', encoding='utf-8') as file:
         documents = file.readlines()
 

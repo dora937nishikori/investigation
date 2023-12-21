@@ -22,7 +22,7 @@ def Morphological(file):
 
             #品詞抽出
             for morph in morphs:
-                if '名詞' in morph[1]: 
+                if '名詞' in morph[1] or '形容詞' in morph[1]: 
                     removed.append(morph[0])
             
 

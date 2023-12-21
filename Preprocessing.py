@@ -43,7 +43,7 @@ def preprocessing(text):
     #ハングル除去
     text = re.sub(r'[가-힣]','',text)
     #繰り返し文字をまとめる
-    text = re.sub(r"(.)\1{1,}", "\g<1>", text)
+    text = re.sub(r"(.)\1{2,}", "\g<1>", text)
     #英文除去
     if checkAlnum(text):
         text = ''
