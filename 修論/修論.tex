@@ -463,7 +463,6 @@ BTMを適用することでテキストデータに存在する潜在的なト�
     \item[抽出した単語を空白区切りで入力する]\mbox{}\\
     BTMによって抽出した$n$単語($n$は抽出する単語数)を空白区切りで入力する. ChatGPTに正しく単語を認識させるため, 
     空白区切りにする必要がある. 
-    %全て使用にした方がいいかも？要件等
     \item[全ての単語を使用する] \mbox{}\\
     抽出した単語を全て使用することで, 後述する類似度計算の精度を向上させる.  
     \item[人名がある場合は指定する]\mbox{}\\
@@ -631,11 +630,34 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
 \newpage
 \begin{figure}[ht]
     \centering
-    \includegraphics[]{images/Confusion_Matrix.drawio.png}
+    \includegraphics[width = 12cm]{images/Confusion_Matrix.drawio.png}
     \caption{Confusion Matrix}
     \label{fig:Confusion Matrix}
 \end{figure}
-%図、数多くある指標、主に用いるのは適合率、指標の計算式
+\vspace{5truept}
+
+\noindent
+以下にConfusion Matrixから求められる様々な指標の例を示す. 
+\vspace{10truept}
+
+\begin{description}
+    \item[抽出した単語を空白区切りで入力する]\mbox{}\\
+    BTMによって抽出した$n$単語($n$は抽出する単語数)を空白区切りで入力する. ChatGPTに正しく単語を認識させるため, 
+    空白区切りにする必要がある. 
+    \item[全ての単語を使用する] \mbox{}\\
+    抽出した単語を全て使用することで, 後述する類似度計算の精度を向上させる.  
+    \item[人名がある場合は指定する]\mbox{}\\
+    人名をChatGPTが認識できない場合, 文章が支離滅裂になる可能性があるため個別に指定する. 
+    \item[一つの文章に多くの単語を用いて, 文章数は少なくする]\mbox{}\\  
+    生成される文章はトピックごとに代表的であるという仮説の元, YouTubeのコメントの特徴に近い
+    文章を生成したいため, 長文を避けるようなルールを追加している. 
+    \item[YouTubeのコメントのように生成する]\mbox{}\\
+    人が投稿するコメントに近しい文章を生成する. 
+\end{description}
+
+この通りConfusion Matrixを使用した機械学習モデルの性能評価には様々な指標が存在するが, 
+どの指標がそのモデル・目的に対して最適な性能評価を行えるかどうかの判断を行う必要がある. 
+%数多くある指標、主に用いるのは適合率、指標の計算式
 
 \newpage
 \part{実験結果}
