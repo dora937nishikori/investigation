@@ -621,14 +621,14 @@ BERTモデルでは, テキストを前処理した後トークン化する. BER
 とみなし, Confusion Matrixを求める. 
 
 図\ref{fig:Confusion Matrix}が一般的な機械学習モデルにおけるConfusion Matrixである. 行が正解のクラス(ラベル)を, 列が機械学習モデルで予測したクラス(ラベル)を表している. 
-TP(True Positive)はPositiveラベルが付いているものを正しく「Positive」だと予測している. 
-TN(True Negative)はNegativeラベルが付いているものを正しく「Negative」だと予測している. 
-FN(False Negative)はPositiveラベルが付いているものを誤って「Negative」だと予測している. 
-FP(False Positive)はNegativeラベルが付いているものを誤って「Positive」だと予測している. 
+TP(True Positive)はPositiveラベルが付いているものを正しく「Positive」だと予測していて, 注目対象を正しく分類できる, また対処すべき注目事象を特定できることを表す. 
+TN(True Negative)はNegativeラベルが付いているものを正しく「Negative」だと予測していて, 注目対象以外を正しく分類できる, また注目対象を見逃さず損失を避けられることを表す. 
+FN(False Negative)はPositiveラベルが付いているものを誤って「Negative」だと予測していて, 注目対象を誤ってそれ以外に分類してしまう, また注目対象を見逃し利益の獲得を逃してしまうことを表す. 
+FP(False Positive)はNegativeラベルが付いているものを誤って「Positive」だと予測していて, 注目すべきではないものを誤って分類してしまう, また分類する事象によっては無駄なコストがかかることを表す. 
 これらを使い, 機械学習モデルの性能を測る様々な指標を計算することができる. 
+\vspace{10truept}
 
-\newpage
-\begin{figure}[ht]
+\begin{figure}[h]
     \centering
     \includegraphics[width = 12cm]{images/Confusion_Matrix.drawio.png}
     \caption{Confusion Matrix}
@@ -637,26 +637,72 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
 \vspace{5truept}
 
 \noindent
-以下にConfusion Matrixから求められる様々な指標の例を示す. 
+以下に図\ref{fig:Confusion Matrix}のConfusion Matrixの例から求められる様々な指標を示す. 
 \vspace{10truept}
 
 \begin{description}
-    \item[抽出した単語を空白区切りで入力する]\mbox{}\\
-    BTMによって抽出した$n$単語($n$は抽出する単語数)を空白区切りで入力する. ChatGPTに正しく単語を認識させるため, 
-    空白区切りにする必要がある. 
-    \item[全ての単語を使用する] \mbox{}\\
-    抽出した単語を全て使用することで, 後述する類似度計算の精度を向上させる.  
-    \item[人名がある場合は指定する]\mbox{}\\
-    人名をChatGPTが認識できない場合, 文章が支離滅裂になる可能性があるため個別に指定する. 
-    \item[一つの文章に多くの単語を用いて, 文章数は少なくする]\mbox{}\\  
-    生成される文章はトピックごとに代表的であるという仮説の元, YouTubeのコメントの特徴に近い
-    文章を生成したいため, 長文を避けるようなルールを追加している. 
-    \item[YouTubeのコメントのように生成する]\mbox{}\\
-    人が投稿するコメントに近しい文章を生成する. 
+    \item[Accuracy]\mbox{}\\
+    正解率・正確度・精度などと呼ばれ, 全予測結果の中で正しい予測をしたもの(TP・TN)の割合のこと. 総合的なモデルの性能を示すのに用いられることが多いが, 
+    クラスに偏りがある場合(例：Positiveが極端に多く, Negativeが極端に少ない), はモデルの性能を正しく評価できないこともある. \\
+    \begin{equation}
+        \textrm{Accuracy} = \dfrac{TP+TN}{TP+FP+FN+TN}\notag
+    \end{equation}
+    \vspace{5truept}
+
+    \item[Error Rate] \mbox{}\\
+    不正解率と呼ばれ, Accuracyの逆で全予測結果の中で誤った予測をしたもの(FP・FN)の割合のこと.
+    Accuracyと同様に, クラスの偏りがある場合にはモデルの性能を正しく評価できないこともある. \\
+    \begin{equation}
+        \textrm{Error Rate} = \dfrac{FP+FN}{TP+FP+FN+TN}\notag
+    \end{equation}
+    \vspace{5truept}
+
+    \item[Sensitivity・Recall]\mbox{}\\
+    感度・再現率・検出率などと呼ばれ, 正解クラスがPositiveであるとき, 予測モデルもPositiveだと判定した割合のこと. 
+    実際に正解クラス(例：癌の検出など)を見逃さないことが重要な事象の際に重視される指標である. \\
+    \begin{equation}
+        \textrm{Sensitivity・Recall} = \dfrac{TP}{TP+FN}\notag
+    \end{equation}
+    \vspace{5truept}
+
+    \item[Specificity]\mbox{}\\  
+    特異度と呼ばれ, 正解がNegativeであるとき, 予測モデルもNegativeだと判定した割合のこと. 
+    疫病検査の例では, 罹患していない人の結果が陰性となる率であり, 負のケースを正確に識別することが重要な事象の際に重視される. \\
+    \begin{equation}
+        \textrm{Specificity} = \dfrac{TN}{FP+TN}\notag
+    \end{equation}
+    \vspace{5truept}
+
+    \item[Precision]\mbox{}\\
+    適合率と呼ばれ, モデルがPositiveと予測したときに実際にそれがPositiveである割合のこと. 
+    偽正例(誤った正の予測)を最小限に抑えたい事象のときに重視される指標である. \\
+    \begin{equation}
+        \textrm{Precision} = \dfrac{TP}{TP+FP}\notag
+    \end{equation}
+    \vspace{5truept}
+
+    \item[F1-measure]\mbox{}\\
+    F1値・F値などと呼ばれ, Precision(適合率)とRecall(再現率)の調和平均のことである. 
+    一般的にPrecisionとRecallの間にはトレードオフの関係があるが, そのバランスを取る必要がある事象のときに重視される指標である. 
+    \begin{equation}
+        \textrm{F1-measure} = \dfrac{2\times \textrm{Precision}\times \textrm{Recall}}{\textrm{Precision}+\textrm{Recall}} = \dfrac{2\times TP}{2\times TP+FP+FN}\notag
+    \end{equation}
+    \vspace{5truept}
+
 \end{description}
 
-この通りConfusion Matrixを使用した機械学習モデルの性能評価には様々な指標が存在するが, 
+このようにConfusion Matrixを使用した機械学習モデルの性能評価には様々な指標が存在するが, 
 どの指標がそのモデル・目的に対して最適な性能評価を行えるかどうかの判断を行う必要がある. 
+図\ref{fig:提案手法のconfusion}は本研究におけるConfusion Matrixを示している. 
+\vspace{10truept}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 12cm]{images/提案手法のconfusion.drawio.png}
+    \caption{提案手法のConfusion Matrix}
+    \label{fig:提案手法のconfusion}
+\end{figure}
+\vspace{5truept}
 %数多くある指標、主に用いるのは適合率、指標の計算式
 
 \newpage
