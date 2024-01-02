@@ -189,7 +189,7 @@ $S_{max}$を用いた式（2）により, 評価値$P_{QE}$を求めている. �
 実際の商品レビュー52,403件を取得し, そのうち51,403件を学習用データ, 1,000件を評価用データに分けて実験を行い, 提案システムの
 精度を評価した結果を表\ref{table:関連研究1結果}に示している. 
 ここで, 登場回数$F$とは学習の素性とするか決定するための単語の出現回数である. 
-表\ref{table:関連研究1結果}から, $F=5000$, 学習率$\eta=1.7$のときに評価値$P_{QE}=0.814$と最大になる. 従って, この論文で提案しているシステムは
+表\ref{table:関連研究1結果}から, $F=5000$, 学習率$\eta=1.7$のときに評価値$P_{QE}=0.814$と最大になる. したがって, この論文で提案しているシステムは
 レビューを参考になる順序に並び替える手法として有効であると言える. 
 
 しかし, この論文ではAmazonの商品レビューを分析の対象としていて, 素性には単語の出現頻度を用いているため, 
@@ -241,7 +241,7 @@ word2vecを用いて文章中の各単語を周辺の単語から学習し, 単�
 トピックモデル適用後の後処理では, 分類結果に似たよったトピックが存在する場合にそれらのトピックを統合する処理を行うことを提案している. 
 類似トピックの判断基準には, TF-IDF cos類似度推定法が用いられている. これは, cos類似度の計算に使用する
 ベクトルの成分をTF-IDFで算出したものにした手法である. この研究では, 分類した各トピックの単語集合に対して
-TF-IDF cos類似度を利用したクラスタリングを行い, その結果に従ってトピックを統合する手法を提案している. 
+TF-IDF cos類似度を利用したクラスタリングを行い, その結果にしたがってトピックを統合する手法を提案している. 
 
 以上の提案手法をLDAのよるメーリングリストのトピック分類に適用し, 評価項目に基づいて比較することで提案手法
 の有効性の評価を行っている. 評価項目として, 一般的なストップワードリストを用いた手法と提案手法を比較している. 
@@ -549,7 +549,7 @@ TF-IDFは式(\ref{equation:TF-IDF})のようにTF(式(\ref{equation:TF}))とIDF(
 \vspace{5truept}
 
 \noindent
-従って, TF-IDFは以下の条件のときに高い数値を示す. 
+したがって, TF-IDFは以下の条件のときに高い数値を示す. 
 \vspace{5truept}
 
 \begin{itemize}
@@ -642,7 +642,7 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
 
 \begin{description}
     \item[Accuracy]\mbox{}\\
-    正解率・正確度・精度などと呼ばれ, 全予測結果の中で正しい予測をしたもの(TP・TN)の割合のこと. 総合的なモデルの性能を示すのに用いられることが多いが, 
+    正解率・正確度・精度などと呼ばれる, 全予測結果の中で正しい予測をしたもの(TP・TN)の割合のことである. 総合的なモデルの性能を示すのに用いられることが多いが, 
     クラスに偏りがある場合(例：Positiveが極端に多く, Negativeが極端に少ない), はモデルの性能を正しく評価できないこともある. \\
     \begin{equation}
         \textrm{Accuracy} = \dfrac{TP+TN}{TP+FP+FN+TN}\notag
@@ -650,7 +650,7 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
     \vspace{5truept}
 
     \item[Error Rate] \mbox{}\\
-    不正解率と呼ばれ, Accuracyの逆で全予測結果の中で誤った予測をしたもの(FP・FN)の割合のこと.
+    不正解率と呼ばれる, Accuracyの逆で全予測結果の中で誤った予測をしたもの(FP・FN)の割合のことである.
     Accuracyと同様に, クラスの偏りがある場合にはモデルの性能を正しく評価できないこともある. \\
     \begin{equation}
         \textrm{Error Rate} = \dfrac{FP+FN}{TP+FP+FN+TN}\notag
@@ -658,7 +658,7 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
     \vspace{5truept}
 
     \item[Sensitivity・Recall]\mbox{}\\
-    感度・再現率・検出率などと呼ばれ, 正解クラスがPositiveであるとき, 予測モデルもPositiveだと判定した割合のこと. 
+    感度・再現率・検出率などと呼ばれる, 正解クラスがPositiveであるとき, 予測モデルもPositiveだと判定した割合のことである. 
     実際に正解クラス(例：癌の検出など)を見逃さないことが重要な事象の際に重視される指標である. \\
     \begin{equation}
         \textrm{Sensitivity・Recall} = \dfrac{TP}{TP+FN}\notag
@@ -666,7 +666,7 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
     \vspace{5truept}
 
     \item[Specificity]\mbox{}\\  
-    特異度と呼ばれ, 正解がNegativeであるとき, 予測モデルもNegativeだと判定した割合のこと. 
+    特異度と呼ばれる, 正解がNegativeであるとき, 予測モデルもNegativeだと判定した割合のことである. 
     疫病検査の例では, 罹患していない人の結果が陰性となる率であり, 負のケースを正確に識別することが重要な事象の際に重視される. \\
     \begin{equation}
         \textrm{Specificity} = \dfrac{TN}{FP+TN}\notag
@@ -674,16 +674,16 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
     \vspace{5truept}
 
     \item[Precision]\mbox{}\\
-    適合率と呼ばれ, モデルがPositiveと予測したときに実際にそれがPositiveである割合のこと. 
-    偽正例(誤った正の予測)を最小限に抑えたい事象のときに重視される指標である. \\
+    適合率と呼ばれる, モデルがPositiveと予測したときに実際にそれがPositiveである割合のことである. 
+    偽陽性(誤った正の予測)を最小限に抑えたい事象のときに重視される指標である. \\
     \begin{equation}
         \textrm{Precision} = \dfrac{TP}{TP+FP}\notag
     \end{equation}
     \vspace{5truept}
 
     \item[F1-measure]\mbox{}\\
-    F1値・F値などと呼ばれ, Precision(適合率)とRecall(再現率)の調和平均のことである. 
-    一般的にPrecisionとRecallの間にはトレードオフの関係があるが, そのバランスを取る必要がある事象のときに重視される指標である. 
+    F1値・F値などと呼ばれる, Precision(適合率)とRecall(再現率)の調和平均のことである. 
+    一般的にPrecisionとRecallの間にはトレードオフの関係があるが, そのバランスを取る必要がある事象のときに重視される指標である. \\
     \begin{equation}
         \textrm{F1-measure} = \dfrac{2\times \textrm{Precision}\times \textrm{Recall}}{\textrm{Precision}+\textrm{Recall}} = \dfrac{2\times TP}{2\times TP+FP+FN}\notag
     \end{equation}
@@ -692,17 +692,45 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
 \end{description}
 
 このようにConfusion Matrixを使用した機械学習モデルの性能評価には様々な指標が存在するが, 
-どの指標がそのモデル・目的に対して最適な性能評価を行えるかどうかの判断を行う必要がある. 
+どの指標がそのモデル・目的に対して最適な性能評価を行えるかの判断を行う必要がある. 
+したがって, ここからは本研究の目的・提案手法においてどの指標が適切なのかを考えていく. 
 図\ref{fig:提案手法のconfusion}は本研究におけるConfusion Matrixを示している. 
-\vspace{10truept}
 
-\begin{figure}[h]
+Accuracy(正解率)は, 全予測結果の中で関連性があるコメント及び関連性がないコメントをどれだけ正確に分類できているかの指標である. 
+関連性あり・なしのそれぞれのコメント数は動画内容・商品(サービス)・視聴者層などによって大幅に異なるため, 
+偏りが発生しやすいと考えられる. 
+\vspace{3truept}
+
+\begin{figure}[ht]
     \centering
     \includegraphics[width = 12cm]{images/提案手法のconfusion.drawio.png}
     \caption{提案手法のConfusion Matrix}
     \label{fig:提案手法のconfusion}
 \end{figure}
 \vspace{5truept}
+
+\newpage
+\noindent
+つまり, Accuracyが高い場合でも, 特定の動画においてモデルが適切に性能を評価しているとは限らないといえる. 
+Error RateはAccuracyと同様にクラスの偏り次第では適切な評価が行えない場合がある. 
+Sensitivity・Recall(感度・再現率)は人手で関連性があると判断したコメントのうち, 提案手法によって関連性があると予測されたコメントの割合である. 
+この値が高いということは, 実際に関連性があるコメントの取りこぼしが少ないことを意味しているので, 本研究の提案手法を評価する指標
+として有効であると考えられる. 
+Specificity(特異度)はSensitivity・Recallの逆で, 人手で関連性がないと判断したコメントのうち, 提案手法によって関連性がないと
+予測されたコメントの割合である. 
+本研究では商品・サービスとの関連性があるコメントを抽出する手法を提案しているため, Specificityは提案手法の評価をする指標として
+適切ではないと考えられる. 
+Precision(適合率)は提案手法によって関連性があると予測されたコメントのうち, 人手で関連性があると判断したコメントの割合である. 
+この値が高いということは, 提案手法によって抽出したコメントを他のユーザーが確認したとき, それが実際に商品との関連性があり, 
+商品を購入する際に参考になりうるコメントである可能性が高いことを意味している. 
+実際に関連性があるコメントを取りこぼしている可能性はあるが, 「他のユーザーが商品の購入判断材料にできるような
+関連性のあるコメントを抽出する」という本研究の提案手法を評価する指標として最適であると考えられる. 
+F1-measure(F値)はPrecisionとRecallの調和平均であり, どちらも提案手法の評価を行う指標として有効であるため, 
+F1-measureを用いた総合的な評価も有効であると考えられる. したがって, 本研究の提案手法を評価する指標としては, Sensitivity・Recall, 
+Precision, F1-measureを主に用いることとする. 
+
+
+
 %数多くある指標、主に用いるのは適合率、指標の計算式
 
 \newpage
