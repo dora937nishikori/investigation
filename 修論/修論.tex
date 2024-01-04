@@ -241,7 +241,7 @@ word2vecを用いて文章中の各単語を周辺の単語から学習し, 単�
 トピックモデル適用後の後処理では, 分類結果に似たよったトピックが存在する場合にそれらのトピックを統合する処理を行うことを提案している. 
 類似トピックの判断基準には, TF-IDF cos類似度推定法が用いられている. これは, cos類似度の計算に使用する
 ベクトルの成分をTF-IDFで算出したものにした手法である. この研究では, 分類した各トピックの単語集合に対して
-TF-IDF cos類似度を利用したクラスタリングを行い, その結果にしたがってトピックを統合する手法を提案している. 
+TF-IDF cos類似度を利用したクラスタリングを行い, その結果に従ってトピックを統合する手法を提案している. 
 
 以上の提案手法をLDAのよるメーリングリストのトピック分類に適用し, 評価項目に基づいて比較することで提案手法
 の有効性の評価を行っている. 評価項目として, 一般的なストップワードリストを用いた手法と提案手法を比較している. 
@@ -268,6 +268,13 @@ TF-IDF cos類似度を利用したクラスタリングを行い, その結果�
 \subsection{関連研究3}
 関連研究3 保留
 
+% 
+% 
+% 
+% 
+% 
+% 
+
 \newpage
 \section{研究目的}
 前項までの関連研究を踏まえた上で, 本研究の研究目的を明らかにする. 本研究ではYouTube上で商品や
@@ -281,8 +288,104 @@ TF-IDF cos類似度を利用したクラスタリングを行い, その結果�
 \part{提案手法}
 第Ⅱ部では本研究の提案手法, 及び提案手法で用いている主要な技術について説明する. 
 \section{トピックモデル}
-提案手法の説明に先立ち, 本提案手法において主要な技術であるトピックモデルについて説明する. トピックモデルとは, 
-%本読んでからがいい
+提案手法の説明に先立ち, 本提案手法において主要な技術であるトピックモデルについて説明する. 
+トピックモデルとは一つの文書が複数のトピック(主題)を持つと仮定する確率生成モデルである. 
+トピックモデルは多くの分野で幅広く活用されており, 例えば文書集合を解析してカテゴリやトピックごとに分類したり, 
+顧客からのフィードバックやレビューを解析して商品やサービスに関する主要な問題点や改善点を特定したり, 
+生物医学研究では疾患や生物学的プロセスに関連するパターンを特定することに用いられている. 
+以下にトピックモデルの概要を示す. 一つの文書が一つのトピックを持つと仮定している「混合ユニグラムモデル」では文書集合全体で一つのトピック
+分布があるのに対して, トピックモデルでは文書ごとにトピック分布$\boldsymbol{\theta}_d=(\theta_{d1},\cdots,\theta_{dK})$
+が存在する. ここで, $\theta_{dk} = p(k|\boldsymbol{\theta}_d)$は文書$d$の単語にトピック$k$が割り当てられる確率であり, 
+$\theta_{dk}\geq0,\sum_{k=1}^K \theta_{dk}=1$を満たす. 
+このトピック分布$\boldsymbol{\theta}_d$に従って文書$d$のそれぞれの単語にトピック$z_{dn}$が割り当てられる. 
+そして割り当てられた各トピックの単語分布$\boldsymbol{\phi}_{z_{dn}}$に従って単語が生成される. 
+ここで, トピックごとの単語分布は$\boldsymbol{\Phi}=(\boldsymbol{\phi}_1, \cdots, \boldsymbol{\phi}_K)$と表せ, 
+$\boldsymbol{\phi}_k=(\phi_{k1}, \cdots, \phi_{kV})$はトピックkの単語分布を表す. 
+$\phi_{kV}=p(v|\boldsymbol{\phi}_k)$はトピック$k$で単語$v$が生成される確率
+($\phi_{kv}\geq0, \sum_{v=1}^V \phi_{kv}=1$)を表している.  
+単語の生成過程を図\ref{fig:生成過程}に, 表\ref{table:記号}に4節で用いている記号を示す. 文書ごとのトピック分布$\boldsymbol{\theta_d}$及びトピックごとの単語分布$\boldsymbol{\phi_k}$
+はカテゴリ分布のパラメータであるため, その共役事前分布であるディリクレ分布から生成されると仮定している. 
+\begin{table}[h]
+    \caption{4節で用いる記号}
+    \vspace{5truept}
+
+    \centering
+    \begin{tabular}{ll}
+        \hline
+        記号 & 説明 \\
+        \hline\hline
+        $D$ & 文書数\\
+        $N_d$ & 文書$d$に含まれる単語数\\
+        $V$ & 文書集合に現れる単語の種類数\\
+        $\boldsymbol{W}$ & 文書集合\\
+        $\boldsymbol{w}_d$ & 文書$d$\\
+        $w_{dn}$ & 文書$d$の$n$番目の単語\\
+        $K$ & トピック数\\
+        $N_k$ & 文書集合全体でトピック$k$が割り当てられた単語数\\
+        $N_{dk}$ & 文書$d$でトピック$k$が割り当てられた単語数\\
+        $N_{kv}$ & 文書集合全体で語彙$v$にトピック$k$が割り当てられた単語数\\
+        $\theta_{dk}$ & 文書$d$でトピック$k$が割り当てられる確率\\
+        $\phi_{kv}$ & トピック$k$のとき語彙$v$が生成される確率\\
+        \hline
+    \end{tabular}
+    \label{table:記号}
+\end{table}
+
+\newpage
+% \begin{enumerate}
+%     \item for トピック $k=1, \cdots, K$
+%     \begin{enumerate}
+%         \item 単語分布を作成 $\boldsymbol{\phi}_k\sim \textrm{Dirichlet}(\beta)$
+%     \end{enumerate}
+%     \item for 文書 $d=1, \cdots, D$
+%     \begin{enumerate}
+%         \item トピック分布を生成 $\boldsymbol{\theta}_d\sim \textrm{Dirichlet}(\alpha)$
+%         \item for 単語 $n=1, \cdots, N_d$
+%         \begin{enumerate}
+%             \item トピックを生成 $z_{dn}\sim \textrm{Categorical}(\boldsymbol{\theta}_d)$
+%             \item 単語を生成 $w_{dn}\sim \textrm{Categorical}(\boldsymbol{\phi}_{z_{dn}})$
+%         \end{enumerate}
+%     \end{enumerate}
+% \end{enumerate}
+\fboxsep = 20pt
+\begin{figure}[h]
+    \centering
+    \fbox{\includegraphics[width = 9cm]{images/生成過程.png}}
+    \caption{トピックモデルの生成過程}
+    \label{fig:生成過程}
+\end{figure}
+\vspace{10truept}
+
+同一の文書に含まれる単語でも, 異なるトピックが割り当てられることがあるため, 一つの文書が複数のトピックを持つことが可能である. 
+また, 語彙ごとにトピックが割り当てられるわけではなく, 単語ごとにトピックが割り当てられるため, 同じ語彙でも異なるトピック
+が割り当てられる可能性も存在する. 
+また, トピックモデルは単語にトピックを割り当てる, または単語をクラスタリングするモデルと考えることもできる. 
+トピック分布$\boldsymbol{\theta_d}$と単語分布集合$\boldsymbol{\Phi}$が与えられたときの文書$\boldsymbol{w}_d$
+の確率は式で表せられる.
+\vspace{10truept}
+
+\begin{equation}
+    p(\boldsymbol{w}_d|\boldsymbol{\theta}_d,\boldsymbol{\Phi})=\prod_{n=1}^{N_d}\sum_{k=1}^{K} p(z_{dn}=k|\boldsymbol{\theta}_d)p(w_{dn}|\boldsymbol{\phi}_k)=\prod_{n=1}^{N_d}\sum_{k=1}^{K} \theta_{dk}\phi_{kw_{dn}}
+\end{equation}
+\vspace{10truept}
+
+図\ref{fig:グラフィカルモデル1}にトピックモデルのグラフィカルモデルを示す. グラフィカルモデルとは, 生成モデル内の変数の依存関係を直感的に理解できるように
+描いた表現方法である. ここで, 色付きの円は観測変数, 白の円は未知変数を表している. 四角は繰り返しを表し, 右下の数字は
+繰り返し回数を表している. また, 右側の四角は単語分布$\boldsymbol{\phi}$がトピック数$K$あることを表している. 
+左外側の四角は文書数$D$を, 左内側の四角は各文書に$N$単語含まれることを表している. 
+このグラフィカルモデルより, トピック分布$\boldsymbol{\theta}$が文書ごとに存在し, トピック$z$が単語ごとに存在することが
+直感的に理解することができる. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 14.6cm]{images/トピックモデルグラフィカルモデル.drawio.png}
+    \caption{トピックモデルのグラフィカルモデル表現}
+    \label{fig:グラフィカルモデル1}
+\end{figure}
+
+
+
+
+\newpage
 \subsection{Latent Dirichlet Allocation}
 LDAの説明
 \subsection{Biterm Topic Model}
