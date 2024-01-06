@@ -1,24 +1,25 @@
 \contentsline {part}{第I部\hspace {1\zw }はじめに}{4}{part.1}%
 \contentsline {section}{\numberline {1}研究背景}{4}{section.1}%
 \contentsline {section}{\numberline {2}関連研究}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}機械学習を用いた自然言語処理による商品レビューの評価(市川[3])}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}単語の出現頻度と類似性に基づいたトピックモデル洗練化手法[2]}{7}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}関連研究3}{9}{subsection.2.3}%
-\contentsline {section}{\numberline {3}研究目的}{10}{section.3}%
-\contentsline {part}{第II部\hspace {1\zw }提案手法}{11}{part.2}%
-\contentsline {section}{\numberline {4}トピックモデル}{11}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Latent Dirichlet Allocation}{13}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Biterm Topic Model}{13}{subsection.4.2}%
-\contentsline {section}{\numberline {5}提案手法}{14}{section.5}%
-\contentsline {subsection}{\numberline {5.1}データ収集}{14}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}前処理手法}{15}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}クリーニング処理}{15}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}MeCabによる形態素解析及び分かち書き}{16}{subsubsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.3}BTMによるトピック抽出}{18}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}文章生成}{19}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}文章間の類似度計算}{20}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}TF-IDF}{20}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}BERT}{21}{subsubsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.6}提案手法の精度検証}{22}{subsection.5.6}%
-\contentsline {part}{第III部\hspace {1\zw }実験結果}{26}{part.3}%
-\contentsline {section}{\numberline {6}実験目的、仮説}{26}{section.6}%
+\contentsline {subsection}{\numberline {2.1}機械学習を用いた自然言語処理による商品レビューの評価(市川[1])}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}単語の出現頻度と類似性に基づいたトピックモデル洗練化手法(東[2])}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}テキストマイニングを用いた口コミ分析による点数評価の信頼性確認手法(谷口[3])}{9}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}グルメサイトにおけるクチコミの信頼性確保に関する一考察(吉見[4])}{11}{subsection.2.4}%
+\contentsline {section}{\numberline {3}研究目的}{12}{section.3}%
+\contentsline {part}{第II部\hspace {1\zw }提案手法}{13}{part.2}%
+\contentsline {section}{\numberline {4}トピックモデル}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Latent Dirichlet Allocation}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Biterm Topic Model}{15}{subsection.4.2}%
+\contentsline {section}{\numberline {5}提案手法}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}データ収集}{16}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}前処理手法}{17}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}クリーニング処理}{17}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}MeCabによる形態素解析及び分かち書き}{18}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}BTMによるトピック抽出}{20}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}文章生成}{21}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}文章間の類似度計算}{22}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}TF-IDF}{22}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}BERT}{23}{subsubsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.6}提案手法の精度検証}{24}{subsection.5.6}%
+\contentsline {part}{第III部\hspace {1\zw }実験結果}{28}{part.3}%
+\contentsline {section}{\numberline {6}実験目的、仮説}{28}{section.6}%

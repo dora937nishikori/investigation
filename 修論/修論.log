@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  5 JAN 2024 00:44
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  6 JAN 2024 19:09
  restricted system commands enabled.
 **c:/Users/937do/Documents/investigation/修論/修論
 (c:/Users/937do/Documents/investigation/修論/修論.tex
@@ -769,88 +769,111 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
  [4
 
 ]
-<images/system1.png, id=155, 207.77625pt x 213.79875pt>
+<images/system1.png, id=160, 207.77625pt x 213.79875pt>
 File: images/system1.png Graphic file (type png)
 <use images/system1.png>
 Package luatex.def Info: images/system1.png  used on input line 149.
 (luatex.def)             Requested size: 284.52756pt x 292.8079pt.
  [5<./images/system1.png>]
-<images/table1.png, id=165, 470.50781pt x 157.33781pt>
+<images/table1.png, id=171, 470.50781pt x 157.33781pt>
 File: images/table1.png Graphic file (type png)
 <use images/table1.png>
 Package luatex.def Info: images/table1.png  used on input line 204.
 (luatex.def)             Requested size: 398.33858pt x 133.20479pt.
  [6]
-<images/fig2.png, id=180, 158.09062pt x 177.66376pt>
+<images/fig2.png, id=185, 158.09062pt x 177.66376pt>
 File: images/fig2.png Graphic file (type png)
 <use images/fig2.png>
-Package luatex.def Info: images/fig2.png  used on input line 222.
+Package luatex.def Info: images/fig2.png  used on input line 223.
 (luatex.def)             Requested size: 158.09023pt x 177.66331pt.
-<images/fig3.png, id=182, 291.33844pt x 268.00125pt>
+<images/fig3.png, id=187, 291.33844pt x 268.00125pt>
 File: images/fig3.png Graphic file (type png)
 <use images/fig3.png>
-Package luatex.def Info: images/fig3.png  used on input line 236.
+Package luatex.def Info: images/fig3.png  used on input line 237.
 (luatex.def)             Requested size: 291.33772pt x 268.00058pt.
  [7<./images/table1.png><./images/fig2.png>]
-<images/table2.png, id=194, 255.20343pt x 144.54pt>
+<images/table2.png, id=199, 255.20343pt x 144.54pt>
 File: images/table2.png Graphic file (type png)
 <use images/table2.png>
-Package luatex.def Info: images/table2.png  used on input line 264.
+Package luatex.def Info: images/table2.png  used on input line 265.
 (luatex.def)             Requested size: 255.2028pt x 144.53963pt.
- [8<./images/fig3.png>] [9<./images/table2.png>] [10] [11]
-<images/生成過程.png, id=226, 679.03688pt x 423.08063pt>
+ [8<./images/fig3.png>]
+<images/関連研究3表1.png, id=208, 375.65344pt x 242.40562pt>
+File: images/関連研究3表1.png Graphic file (type png)
+<use images/関連研究3表1.png>
+Package luatex.def Info: images/関連研究3表1.png  used on input line 284.
+(luatex.def)             Requested size: 284.52756pt x 183.61617pt.
+ [9<./images/table2.png><./images/関連研究3表1.png>]
+<images/関連研究3表2.png, id=217, 369.63094pt x 239.39438pt>
+File: images/関連研究3表2.png Graphic file (type png)
+<use images/関連研究3表2.png>
+Package luatex.def Info: images/関連研究3表2.png  used on input line 294.
+(luatex.def)             Requested size: 284.52756pt x 184.27579pt.
+<images/関連研究3表3.png, id=220, 403.5075pt x 167.87718pt>
+File: images/関連研究3表3.png Graphic file (type png)
+<use images/関連研究3表3.png>
+Package luatex.def Info: images/関連研究3表3.png  used on input line 319.
+(luatex.def)             Requested size: 284.52756pt x 118.37648pt.
+ [10<./images/関連研究3表2.png><./images/関連研究3表3.png>]
+<images/関連研究4表1.png, id=232, 420.06938pt x 361.35pt>
+File: images/関連研究4表1.png Graphic file (type png)
+<use images/関連研究4表1.png>
+Package luatex.def Info: images/関連研究4表1.png  used on input line 333.
+(luatex.def)             Requested size: 284.52756pt x 244.75536pt.
+ [11<./images/関連研究4表1.png>] [12] [13]
+<images/生成過程.png, id=258, 679.03688pt x 423.08063pt>
 File: images/生成過程.png Graphic file (type png)
 <use images/生成過程.png>
-Package luatex.def Info: images/生成過程.png  used on input line 353.
+Package luatex.def Info: images/生成過程.png  used on input line 414.
 (luatex.def)             Requested size: 256.0748pt x 159.54572pt.
-<images/トピックモデルグラフィカルモデル.drawio.png, id=228, 1798.72pt x 325.215pt>
+<images/トピックモデルグラフィカルモデル.drawio.png, id=260, 1798.72pt x 325.215pt>
 File: images/トピックモデルグラフィカルモデル.drawio.png Graphic file (type png)
 <use images/トピックモデルグラフィカルモデル.drawio.png>
-Package luatex.def Info: images/トピックモデルグラフィカルモデル.drawio.png  used on input line 380.
+Package luatex.def Info: images/トピックモデルグラフィカルモデル.drawio.png  used on input line 441.
 (luatex.def)             Requested size: 415.4104pt x 75.10553pt.
- [12<./images/生成過程.png><./images/トピックモデルグラフィカルモデル.drawio.png>] [13]
-<images/元コメント.png, id=245, 498.36188pt x 88.83188pt>
+ [14<./images/生成過程.png><./images/トピックモデルグラフィカルモデル.drawio.png>] [15]
+<images/元コメント.png, id=277, 498.36188pt x 88.83188pt>
 File: images/元コメント.png Graphic file (type png)
 <use images/元コメント.png>
-Package luatex.def Info: images/元コメント.png  used on input line 434.
+Package luatex.def Info: images/元コメント.png  used on input line 495.
 (luatex.def)             Requested size: 412.56496pt x 73.54066pt.
- [14<./images/元コメント.png>] [15]
-<images/前処理適用.png, id=260, 499.11469pt x 90.3375pt>
+ [16<./images/元コメント.png>] [17]
+<images/前処理適用.png, id=292, 499.11469pt x 90.3375pt>
 File: images/前処理適用.png Graphic file (type png)
 <use images/前処理適用.png>
-Package luatex.def Info: images/前処理適用.png  used on input line 490.
+Package luatex.def Info: images/前処理適用.png  used on input line 551.
 (luatex.def)             Requested size: 412.56496pt x 74.67407pt.
- [16<./images/前処理適用.png>]
-<images/形態素解析.drawio.png, id=271, 3613.5pt x 1806.75pt>
+ [18<./images/前処理適用.png>]
+<images/形態素解析.drawio.png, id=304, 3613.5pt x 1806.75pt>
 File: images/形態素解析.drawio.png Graphic file (type png)
 <use images/形態素解析.drawio.png>
-Package luatex.def Info: images/形態素解析.drawio.png  used on input line 545.
+Package luatex.def Info: images/形態素解析.drawio.png  used on input line 606.
 (luatex.def)             Requested size: 415.4104pt x 207.70296pt.
- [17<./images/形態素解析.drawio.png>] [18]
-<images/文章生成.drawio.png, id=285, 3267.20625pt x 1711.39375pt>
+ [19<./images/形態素解析.drawio.png>] [20]
+<images/文章生成.drawio.png, id=319, 3267.20625pt x 1711.39375pt>
 File: images/文章生成.drawio.png Graphic file (type png)
 <use images/文章生成.drawio.png>
-Package luatex.def Info: images/文章生成.drawio.png  used on input line 585.
+Package luatex.def Info: images/文章生成.drawio.png  used on input line 646.
 (luatex.def)             Requested size: 415.4104pt x 217.57962pt.
- [19<./images/文章生成.drawio.png>](load cache: extra_lmroman7-regular.luc)
+ [21<./images/文章生成.drawio.png>](load cache: extra_lmroman7-regular.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 602.
+(Font)              scaled to size 6.73553pt on input line 663.
 (load cache: extra_lmroman5-regular.luc)
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 602.
- [20]
-<images/BERT.drawio.png, id=309, 1087.06125pt x 514.92375pt>
+(Font)              scaled to size 4.8111pt on input line 663.
+ [22]
+<images/BERT.drawio.png, id=341, 1087.06125pt x 514.92375pt>
 File: images/BERT.drawio.png Graphic file (type png)
 <use images/BERT.drawio.png>
-Package luatex.def Info: images/BERT.drawio.png  used on input line 684.
+Package luatex.def Info: images/BERT.drawio.png  used on input line 745.
 (luatex.def)             Requested size: 284.52756pt x 134.77272pt.
- [21<./images/BERT.drawio.png>] [22]
-<images/Confusion_Matrix.drawio.png, id=325, 1782.66pt x 698.61pt>
+ [23<./images/BERT.drawio.png>] [24]
+<images/Confusion_Matrix.drawio.png, id=357, 1782.66pt x 698.61pt>
 File: images/Confusion_Matrix.drawio.png Graphic file (type png)
 <use images/Confusion_Matrix.drawio.png>
-Package luatex.def Info: images/Confusion_Matrix.drawio.png  used on input line 736.
+Package luatex.def Info: images/Confusion_Matrix.drawio.png  used on input line 797.
 (luatex.def)             Requested size: 341.43306pt x 133.80327pt.
- [23
+ [25
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.5.8'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.5.8'
@@ -878,34 +901,34 @@ warning  (pdf backend): ignoring duplicate destination with the name 'equation.5
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.5.8'
 
 warning  (pdf backend): ignoring duplicate destination with the name 'equation.5.8'
-<images/提案手法のconfusion.drawio.png, id=335, 1919.17pt x 754.82pt>
+<images/提案手法のconfusion.drawio.png, id=367, 1919.17pt x 754.82pt>
 File: images/提案手法のconfusion.drawio.png Graphic file (type png)
 <use images/提案手法のconfusion.drawio.png>
-Package luatex.def Info: images/提案手法のconfusion.drawio.png  used on input line 809.
+Package luatex.def Info: images/提案手法のconfusion.drawio.png  used on input line 870.
 (luatex.def)             Requested size: 341.43306pt x 134.28383pt.
-[24<./images/提案手法のconfusion.drawio.png>] [25] [26] [27] (./修論.aux)
+[26<./images/提案手法のconfusion.drawio.png>] [27] [28] [29] (./修論.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
  ***********
 Package rerunfilecheck Info: File `修論.out' has not changed.
-(rerunfilecheck)             Checksum: A164F8328567E2887BBDC0926CF51427;3132.
+(rerunfilecheck)             Checksum: E04D2A46C5D1DC379346F5B400917299;3751.
 )
 
 Here is how much of LuaTeX's memory you used:
- 12713 strings out of 476729
+ 12765 strings out of 476729
  244642,1977958 words of node,token memory allocated
  1847 words of node memory still in use:
    11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 555 attribute, 57 glue_spec, 62 attribute_list, 1 write, 14 user_defined nodes
-   avail lists: 1:44,2:71065,3:356,4:405,5:152,6:74,7:7596,8:64,9:3437,10:45,11:77
- 34104 multiletter control sequences out of 65536+600000
+   avail lists: 1:44,2:71065,3:367,4:423,5:152,6:77,7:7596,8:64,9:3437,10:45,11:77
+ 34137 multiletter control sequences out of 65536+600000
  60 fonts using 52656399 bytes
  125i,11n,128p,1806b,440s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on 修論.pdf (28 pages, 1569889 bytes).
+Output written on 修論.pdf (30 pages, 1764994 bytes).
 
-PDF statistics: 444 PDF objects out of 1000 (max. 8388607)
- 351 compressed objects within 4 object streams
- 85 named destinations out of 1000 (max. 131072)
- 193 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 476 PDF objects out of 1000 (max. 8388607)
+ 373 compressed objects within 4 object streams
+ 92 named destinations out of 1000 (max. 131072)
+ 201 words of extra memory for PDF output out of 10000 (max. 100000000)
 

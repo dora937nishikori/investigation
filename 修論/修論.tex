@@ -128,7 +128,7 @@ ECサイトのレビューの信頼性や参考になるかどうかを評価す
 \section{関連研究}
 本研究を進めるにあたり, 研究テーマの方向性決めや研究課題の発見, 及び本研究で用いている技術に関して参考にした
 論文を4つ紹介する. 
-\subsection{機械学習を用いた自然言語処理による商品レビューの評価(市川[3])}
+\subsection{機械学習を用いた自然言語処理による商品レビューの評価(市川[1])}
 この論文では, ユーザーが商品レビューを読んで参考になったかどうかを評価する機能が備わっていない
 ECサイトの場合に, 数多くあるレビューから参考になる情報を探す必要がある問題に着目し, 
 機械学習を用いた自然言語処理の手法で分析, 評価を行い, レビューを参考になる順番に並び替える
@@ -204,8 +204,9 @@ $S_{max}$を用いた式（2）により, 評価値$P_{QE}$を求めている. �
     \includegraphics[width=14cm]{images/table1.png}
     \label{table:関連研究1結果}
 \end{table}
+\vspace{20truept}
 
-\subsection{単語の出現頻度と類似性に基づいたトピックモデル洗練化手法[2]}
+\subsection{単語の出現頻度と類似性に基づいたトピックモデル洗練化手法(東[2])}
 この論文では, 第Ⅱ部で後述するトピックモデルの一種のLatent Dirichlet Allocation(以下LDA)を自然言語文書に適用する際の
 改善案を提案している. 
 通常, トピックモデルを自然言語文書に適用する際には, 前処理として分類に不必要なストップワードの除去を行うことが多いが, 
@@ -264,16 +265,76 @@ TF-IDF cos類似度を利用したクラスタリングを行い, その結果�
     \includegraphics[]{images/table2.png}
     \label{table:関連研究2結果}
 \end{table}
+\vspace{10truept}
 
-\subsection{関連研究3}
-関連研究3 保留
+\subsection{テキストマイニングを用いた口コミ分析による点数評価の信頼性確認手法(谷口[3])}
+谷口(2017)は商品に対して点数評価を加えたレビューを行える口コミサイトに関して, 平均値や点数の分布が示されているなどの
+メリットがあることに対し, 点数の信頼性に疑問を抱く購入検討者が多い問題に着目している. 
+そこで, カメラを購入した顧客からの点数評価とレビューを用いて, 点数評価の信頼性を確認する手法を提案している. 
 
-% 
-% 
-% 
-% 
-% 
-% 
+谷口(2017)はまずSonyの製品サイト上のカメラに関するレビューから, 5段階の総合評価の点数を集計している. 
+次に, カメラの特徴(画質・機能・デザインなど)に関する点数評価を集計し, その結果を表\ref{table:関連研究3表1}に, 
+総合評価で5を付けた人の各項目の点数評価の集計結果を表に示している. 
+谷口(2017)は, この集計結果より総合評価5を付けている人でも全ての項目で満足しているわけで
+
+\begin{table}[h]
+    \centering
+    \caption{各項目の点数評価 (出典：谷口[3] p.2)}
+    \vspace{5truept}
+    \includegraphics[width = 10cm]{images/関連研究3表1.png}
+    \label{table:関連研究3表1}
+\end{table}
+\vspace{20truept}
+
+\newpage
+\begin{table}[h]
+    \centering
+    \caption{総合評価5の各項目の点数評価 (出典：谷口[3] p.2)}
+    \vspace{5truept}
+    \includegraphics[width = 10cm]{images/関連研究3表2.png}
+    \label{table:関連研究3表2}
+\end{table}
+\vspace*{20truept}
+
+\noindent
+はないことや, 逆に評価項目にはない部分で製品に対して満足している可能性などに言及している. 
+この点数評価の信頼性を確認するため, 製品に対するレビューをテキストマイニングにて分析し, 
+Positive, Neutral, およびNegativeの表現を抽出する感性評価を行っている. 
+総合評価の各点数ごとのレビューから各感性の出現頻度をカウントした結果が表\ref{table:関連研究3表3}である. 
+表\ref{table:関連研究3表3}より, 総合評価4ではNeutralに分類されている文章が9割を超えていることや, 総合評価5では
+半数がNeutralを示し, Negativeと判定された口コミが0件であることが分かる. 
+この結果より, 谷口(2017)は総合評価は妥当な点数であるといえることや, 
+総合評価が満点であっても全ての項目に対して満足しているわけではない場合もあることを明らかにしている. 
+
+総合評価5のときNegativeが0件であることから点数評価の妥当性を判断できるが, Neutralに分類された文書
+が多い総合評価4に妥当性があるかどうかは判断が難しいと感じた. また, 谷口(2017)の研究は点数評価に対する信頼性を
+評価しているため, 文書自体の信頼性については確認されていない. 本研究では, Positive, Negativeなどの評価表現
+の有無に依存せずに文書の分類(商品との関連性の有無)を行える手法を提案する. 
+
+
+\begin{table}[h]
+    \centering
+    \caption{総合評価と口コミ分析の感性評価 (出典：谷口[3] p.2)}
+    \vspace{5truept}
+    \includegraphics[width = 10cm]{images/関連研究3表3.png}
+    \label{table:関連研究3表3}
+\end{table}
+
+\newpage
+\subsection{グルメサイトにおけるクチコミの信頼性確保に関する一考察(吉見[4])}
+吉見(2014)はグルメサイトの「食べログ」で所謂やらせのレビューが行われていた問題によって口コミの信頼性が揺らいでいる
+問題に着目し, 実名・顕名・匿名といった口コミの差異がその信頼性に与える影響について検討している. 
+各項目を表\ref{table:関連研究4表1}の定義に従って分類している. 
+
+\begin{table}[h]
+    \centering
+    \caption{匿名・顕名・実名の分類 (出典：吉見[4] p.2)}
+    \vspace{5truept}
+    \includegraphics[width = 10cm]{images/関連研究4表1.png}
+    \label{table:関連研究4表1}
+\end{table}
+
+
 
 \newpage
 \section{研究目的}
@@ -461,7 +522,7 @@ YouTubeのコメントやSNSの投稿には絵文字や顔文字, URL, 話し言
     \item[数字を0に置換]\mbox{}\\
     自然言語処理の様々な手法において, 数字は意味を為さないことが多いため, 
     1つ以上連続している数字を全て0に置換することが多い. 本研究でも数字に関する情報を必要としないため, 
-    数字はすべて0に置換する. \\
+    数字は全て0に置換する. \\
     例：「目標は年間で10回のイベントを開催することです」→「目標は年間で0回のイベントを開催することです」
     \item[単語の正規化]\mbox{}\\
     単語の正規化とは, 単語の文字種の統一, つづりや表記ゆれなどを無くすことである. この処理を行うことで
@@ -842,16 +903,6 @@ Precision, F1-measureを主に用いることとする.
 
 \newpage
 \begin{thebibliography}{99}
-    \bibitem{LDA}
-    David M. Blei, Andrew Y. Ng, Michael I. Jordan :
-    \newblock ``Latent Dirichlet Allocation'', 
-    \newblock Journal of Machine Learning Research, Vol.4, No.3, pp.148-159, 2019.
-
-    \bibitem{BTM}
-    Xiaohui Yan, Jiafeng Guo, Yanyan Lan, Xueqi Cheng :
-    \newblock ``A Biterm Topic Model for Short Texts'', 
-    \newblock WWW '13 Proceedings of the 22nd international conference on World Wide Web, pp.1445-1456, 2013.
-
     \bibitem{機械学習を用いたレビュー評価}
     市川 知春, 武田 和大, 原 崇：
     \newblock 「機械学習を用いた自然言語処理による商品レビューの評価」, 
@@ -862,16 +913,26 @@ Precision, F1-measureを主に用いることとする.
     \newblock 「単語の出現頻度と類似性に基づいたトピックモデル洗練化手法」, 
     \newblock コンピュータソフトウェア, Vol.36, No.4, pp.25-31, 2019.
 
-    \bibitem{グルメサイト}
-    吉見 憲二：
-    \newblock 「グルメサイトにおけるクチコミの信頼性確保に関する一考察」, 
-    \newblock IPSJ SIG Technical Report, Vol.2014-DPS-161 No.2, Vol.2014-EIP-65 No.2.
-
     \bibitem{点数評価}
     谷口 佑子, 津田 和彦：
     \newblock 「テキストマイニングを用いた口コミ分析による点数評価の信頼性確認手法」, 
     \newblock 人工知能学会, Vol.31, 3A1-4, 2017.
 
-    
+    \bibitem{グルメサイト}
+    吉見 憲二：
+    \newblock 「グルメサイトにおけるクチコミの信頼性確保に関する一考察」, 
+    \newblock IPSJ SIG Technical Report, Vol.2014-DPS-161 No.2, Vol.2014-EIP-65 No.2.   
+
+    \bibitem{LDA}
+    David M. Blei, Andrew Y. Ng, Michael I. Jordan :
+    \newblock ``Latent Dirichlet Allocation'', 
+    \newblock Journal of Machine Learning Research, Vol.4, No.3, pp.148-159, 2019.
+
+    \bibitem{BTM}
+    Xiaohui Yan, Jiafeng Guo, Yanyan Lan, Xueqi Cheng :
+    \newblock ``A Biterm Topic Model for Short Texts'', 
+    \newblock WWW '13 Proceedings of the 22nd international conference on World Wide Web, pp.1445-1456, 2013.
+
+     
 \end{thebibliography}
 \end{document}
