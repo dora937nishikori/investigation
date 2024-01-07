@@ -152,11 +152,12 @@ ECサイトの場合に, 数多くあるレビューから参考になる情報�
 \end{figure}
 この研究はレビューを参考になる順序に並べ替えることが目的のため, 素性には単語の出現頻度を用いている. 
 目的変数をレビューが参考になる確率$P$とし, 抽出した素性を用いてロジスティック回帰により学習する. 
-ロジスティック回帰のモデル式は式（1）で示される. $\theta_i$は素性の重み, $N$は素性の数を表している. 
+ロジスティック回帰のモデル式は式(\ref{equation:ロジスティック})で示される. $\theta_i$は素性の重み, $N$は素性の数を表している. 
 \vspace{5truept}
 
 \begin{equation}
     P=\dfrac{1}{1+exp(\theta_0x_0+\theta_1x_1+\cdots+\theta_Nx_N)}
+    \label{equation:ロジスティック}
 \end{equation}
 \vspace{5truept}
 
@@ -177,12 +178,13 @@ $P_{match}=20\%$と低い結果になる.
 
 このように正しい評価が行えない場合を解決するため, この研究ではクイックソートを利用した新しい評価法のQE法(Quicksort Evaluation method)
 を提案している. QE法ではピボットを中央値とし, 昇順にするために要素を入れ替えた回数$S_{count}$と, 要素数における最大の入れ替え回数
-$S_{max}$を用いた式（2）により, 評価値$P_{QE}$を求めている. なお, $S_{max}$は全ての要素が逆順の場合にクイックソートで
+$S_{max}$を用いた式(\ref{equation:QE法})により, 評価値$P_{QE}$を求めている. なお, $S_{max}$は全ての要素が逆順の場合にクイックソートで
 昇順に入れ替えた回数である. 
 \vspace{5truept}
 
 \begin{equation}
     P_{QE}=1-\dfrac{S_{count}}{S_{max}}
+    \label{equation:QE法}
 \end{equation}
 \vspace{5truept}
 
@@ -455,11 +457,12 @@ $\phi_{kV}=p(v|\boldsymbol{\phi}_k)$はトピック$k$で単語$v$が生成さ�
 が割り当てられる可能性も存在する. 
 また, トピックモデルは単語にトピックを割り当てる, または単語をクラスタリングするモデルと考えることもできる. 
 トピック分布$\boldsymbol{\theta_d}$と単語分布集合$\boldsymbol{\Phi}$が与えられたときの文書$\boldsymbol{w}_d$
-の確率は式で表せられる.
+の確率は式(\ref{equation:トピックモデル})で表せられる.
 \vspace{10truept}
 
 \begin{equation}
     p(\boldsymbol{w}_d|\boldsymbol{\theta}_d,\boldsymbol{\Phi})=\prod_{n=1}^{N_d}\sum_{k=1}^{K} p(z_{dn}=k|\boldsymbol{\theta}_d)p(w_{dn}|\boldsymbol{\phi}_k)=\prod_{n=1}^{N_d}\sum_{k=1}^{K} \theta_{dk}\phi_{kw_{dn}}
+    \label{equation:トピックモデル}
 \end{equation}
 \vspace{10truept}
 
@@ -467,6 +470,7 @@ $\phi_{kV}=p(v|\boldsymbol{\phi}_k)$はトピック$k$で単語$v$が生成さ�
 描いた表現方法である. ここで, 色付きの円は観測変数, 白の円は未知変数を表している. 四角は繰り返しを表し, 右下の数字は
 繰り返し回数を表している. また, 右側の四角は単語分布$\boldsymbol{\phi}$がトピック数$K$あることを表している. 
 左外側の四角は文書数$D$を, 左内側の四角は各文書に$N$単語含まれることを表している. 
+$\alpha$はトピック分布のハイパーパラメータ, $\beta$は単語分布のハイパーパラメータを表している. 
 このグラフィカルモデルより, トピック分布$\boldsymbol{\theta}$が文書ごとに存在し, トピック$z$が単語ごとに存在することが
 直感的に理解することができる. 
 \begin{figure}[h]
@@ -477,11 +481,82 @@ $\phi_{kV}=p(v|\boldsymbol{\phi}_k)$はトピック$k$で単語$v$が生成さ�
 \end{figure}
 
 
+\newpage
+\subsection{Latent Dirichlet Allocation}
+トピックモデルの代表的な手法に潜在ディリクレ配分法(Latent Dirichlet Allocation:以下LDA)がある. 
+LDAでは各文書のトピック分布$\boldsymbol{\theta}$がディリクレ分布に従うと仮定している. 
+この分布はハイパーパラメータ$\alpha$によって定義され, 式(\ref{equation:ディリクレα})で表される. 
+ここで, $Dir(\alpha, \cdots, \alpha)=Dir(\boldsymbol{\alpha})$, $B(\boldsymbol{\alpha})$
+はディリクレ分布の正規化定数であり, 式(\ref{equation:ガンマα})で表される. 
+$\alpha$は文章中のトピック分布を平滑化する役割があり, 値が小さいほど各文書は少数のトピックに集中する傾向がある. 
+逆に$\alpha$の値が大きい場合は各文書がより多くのトピックを含む傾向にあり, 一つの文書内で多様なトピックが出現する確率が高くなる. 
+\vspace{5truept}
+
+\begin{equation}
+    Dir(\boldsymbol{\theta}_d|\boldsymbol{\alpha}) = \frac{1}{B(\boldsymbol{\alpha})}\prod_{i=1}^{K}\theta_{di}^{\alpha_i-1}
+    \label{equation:ディリクレα}
+\end{equation}
+\vspace{5truept}
+
+\begin{equation}
+    B(\boldsymbol{\alpha}) = \frac{\prod_{i=1}^{K}\Gamma(\alpha_i)}{\Gamma(\sum_{i=1}^{K} \alpha_i)}
+    \label{equation:ガンマα}
+\end{equation}
+\vspace{10truept}
+
+
+
+同様に各トピックの単語分布$\boldsymbol{\phi}$もディリクレ分布に従うと仮定している. 
+単語分布はハイパーパラメータ$\beta$によって定義され, 式(\ref{equation:ディリクレβ})で表される. 
+ここで, $Dir(\beta, \cdots, \beta)=Dir(\boldsymbol{\beta})$, $B(\boldsymbol{\beta})$
+はディリクレ分布の正規化定数であり, 式(\ref{equation:ガンマβ})で表される. 
+$\beta$が小さいとき, 各トピックは比較的少数の単語に集中する傾向があり, 
+トピック間の区別が明確になりやすい. 
+$beta$が大きいとき, 各トピックは多様な単語を含むようになる傾向があり, 
+トピック間の明確な区別が困難になる場合がある. 
+\vspace{5truept}
+
+\begin{equation}
+    Dir(\boldsymbol{\phi}_k|\boldsymbol{\beta}) = \frac{1}{B(\boldsymbol{\beta})}\prod_{j=1}^{V}\phi_{kj}^{\beta_j-1}
+    \label{equation:ディリクレβ}
+\end{equation}
+\vspace{5truept}
+
+\begin{equation}
+    B(\boldsymbol{\beta}) = \frac{\prod_{j=1}^{V}\Gamma(\beta_j)}{\Gamma(\sum_{j=1}^{V} \beta_j)}
+    \label{equation:ガンマβ}
+\end{equation}
+\vspace{10truept}
+
+LDAの生成過程を図\ref{fig:グラフィカルモデル1}のグラフィカルモデルを用いて説明する. 
+グラフィカルモデルの左側の$\alpha$がトピック分布を生成するディリクレ分布のハイパーパラメータである. 
+ディリクレ分布に従い, 各文書のトピック分布$\boldsymbol{\theta}_d$が決定する. 
+例えば, オリンピックに関連するニュースの文章に対しては「スポーツ」や「経済」といったトピックの確率が高い分布が生成される. 
+このとき, 「スポーツ」などのトピックのラベルはトピックモデルが推定するわけではなく, 人手で判断して付与するものである. 
+次に, 先ほど求めたトピック分布$\boldsymbol{\theta}_d$から文書中の各単語の潜在トピックを多項分布により求める. 
+例えば文書中の単語数$N=10$の場合, 「スポーツ」のトピックの確率が高い文書では6つの単語に「スポーツ」トピックが割り当てられ, 
+残りの単語に次に確率が高いトピックを順に割り当てていくことで文書中の単語全てにトピックが割り当てられる. 
+グラフィカルモデルの右側の$\beta$が各トピックの単語分布を生成するディリクレ分布のハイパーパラメータである. 
+ディリクレ分布に従い, 各トピックの単語分布$\boldsymbol{\phi}$が決定される. 
+例えば, 「スポーツ」トピックであれば「野球」「ボール」などが, 「経済」トピックであれば「GDP」や「円高」などの単語の確率が高い
+分布が生成される. 
+
+このように, LDAは文書集合の学習データからトピック分布$\boldsymbol{\theta}$と単語分布$\boldsymbol{\phi}$を推定し,  
+与えられた文書が推定した分布によって生成されると仮定した確率生成モデルである. 
+LDAの出力であるトピック分布$\boldsymbol{\theta}$と単語分布$\boldsymbol{\phi}$を式(\ref{equation:LDA})に示す. 
+\vspace{5truept}
+
+\begin{equation}
+    P(\boldsymbol{w}, \boldsymbol{z}, \boldsymbol{\theta}, \boldsymbol{\phi}:\boldsymbol{\alpha}, \boldsymbol{\beta}) = 
+    \prod_{d=1}P(\boldsymbol{\theta}_d|\boldsymbol{\alpha}) \prod_{k=1}P(\boldsymbol{\phi}_k|\boldsymbol{\beta})
+    \prod_{n=1}P(z_{d,n}|\boldsymbol{\theta}_d)P(w_{d,n}|\boldsymbol{\phi}_kz_{d,n})
+    \label{equation:LDA}
+\end{equation}
+\vspace{10truept}
+
 
 
 \newpage
-\subsection{Latent Dirichlet Allocation}
-LDAの説明
 \subsection{Biterm Topic Model}
 BTMの説明
 
@@ -957,9 +1032,9 @@ Precision, F1-measureを主に用いることとする.
     \newblock IPSJ SIG Technical Report, Vol.2014-DPS-161 No.2, Vol.2014-EIP-65 No.2.   
 
     \bibitem{LDA}
-    David M. Blei, Andrew Y. Ng, Michael I. Jordan :
+    Blei, M. David., Ng, Y. Andrew., and Jordan, I. Michael : 
     \newblock ``Latent Dirichlet Allocation'', 
-    \newblock Journal of Machine Learning Research, Vol.4, No.3, pp.148-159, 2019.
+    \newblock Journal of Machine Learning Research 3, pp.993-1022, 2003.
 
     \bibitem{BTM}
     Xiaohui Yan, Jiafeng Guo, Yanyan Lan, Xueqi Cheng :

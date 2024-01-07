@@ -8,6 +8,8 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.1}機械学習を用いた自然言語処理による商品レビューの評価(市川[1])}{5}{subsection.2.1}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces システム概要図 (出典：市川[1] p.85)}}{5}{figure.1}\protected@file@percent }
 \newlabel{fig:関連研究1システム概要図}{{1}{5}{システム概要図 (出典：市川[1] p.85)}{figure.1}{}}
+\newlabel{equation:ロジスティック}{{1}{6}{機械学習を用いた自然言語処理による商品レビューの評価(市川[1])}{equation.2.1}{}}
+\newlabel{equation:QE法}{{2}{6}{機械学習を用いた自然言語処理による商品レビューの評価(市川[1])}{equation.2.2}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces 登場回数と学習率の組み合わせごとの評価値$P_{QE}$ (出典：市川[1] p.91)}}{7}{table.1}\protected@file@percent }
 \newlabel{table:関連研究1結果}{{1}{7}{登場回数と学習率の組み合わせごとの評価値$P_{QE}$ (出典：市川[1] p.91)}{table.1}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}単語の出現頻度と類似性に基づいたトピックモデル洗練化手法(東[2])}{7}{subsection.2.2}\protected@file@percent }
@@ -38,49 +40,55 @@
 \newlabel{table:記号}{{7}{13}{4節で用いる記号}{table.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces トピックモデルの生成過程}}{14}{figure.6}\protected@file@percent }
 \newlabel{fig:生成過程}{{6}{14}{トピックモデルの生成過程}{figure.6}{}}
+\newlabel{equation:トピックモデル}{{3}{14}{トピックモデル}{equation.4.3}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces トピックモデルのグラフィカルモデル表現}}{14}{figure.7}\protected@file@percent }
 \newlabel{fig:グラフィカルモデル1}{{7}{14}{トピックモデルのグラフィカルモデル表現}{figure.7}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Latent Dirichlet Allocation}{15}{subsection.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Biterm Topic Model}{15}{subsection.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}提案手法}{16}{section.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}データ収集}{16}{subsection.5.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces YouTube Data API v3 で取得できるコメント情報}}{16}{table.8}\protected@file@percent }
-\newlabel{table:データ収集}{{8}{16}{YouTube Data API v3 で取得できるコメント情報}{table.8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces 抽出したコメントの一例}}{16}{figure.8}\protected@file@percent }
-\newlabel{fig:元コメント}{{8}{16}{抽出したコメントの一例}{figure.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}前処理手法}{17}{subsection.5.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}クリーニング処理}{17}{subsubsection.5.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces 前処理後のコメント}}{18}{figure.9}\protected@file@percent }
-\newlabel{fig:前処理}{{9}{18}{前処理後のコメント}{figure.9}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}MeCabによる形態素解析及び分かち書き}{18}{subsubsection.5.2.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces 形態素解析辞書の比較}}{19}{table.9}\protected@file@percent }
-\newlabel{table:辞書比較}{{9}{19}{形態素解析辞書の比較}{table.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces 辞書による形態素解析結果の比較}}{19}{figure.10}\protected@file@percent }
-\newlabel{fig:形態素解析}{{10}{19}{辞書による形態素解析結果の比較}{figure.10}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}BTMによるトピック抽出}{20}{subsection.5.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}文章生成}{21}{subsection.5.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces ChatGPTを用いた文章生成例}}{21}{figure.11}\protected@file@percent }
-\newlabel{fig:文章生成}{{11}{21}{ChatGPTを用いた文章生成例}{figure.11}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}文章間の類似度計算}{22}{subsection.5.5}\protected@file@percent }
-\newlabel{equation:Cos類似度}{{4}{22}{文章間の類似度計算}{equation.5.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.1}TF-IDF}{22}{subsubsection.5.5.1}\protected@file@percent }
-\newlabel{equation:TF}{{5}{22}{TF-IDF}{equation.5.5}{}}
-\newlabel{equation:IDF}{{6}{22}{TF-IDF}{equation.5.6}{}}
-\newlabel{equation:TF-IDF}{{7}{23}{TF-IDF}{equation.5.7}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.2}BERT}{23}{subsubsection.5.5.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces NSPによる文章のつながり判定例}}{23}{figure.12}\protected@file@percent }
-\newlabel{fig:BERT}{{12}{23}{NSPによる文章のつながり判定例}{figure.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}提案手法の精度検証}{24}{subsection.5.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Confusion Matrix}}{25}{figure.13}\protected@file@percent }
-\newlabel{fig:Confusion Matrix}{{13}{25}{Confusion Matrix}{figure.13}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces 提案手法のConfusion Matrix}}{26}{figure.14}\protected@file@percent }
-\newlabel{fig:提案手法のconfusion}{{14}{26}{提案手法のConfusion Matrix}{figure.14}{}}
-\@writefile{toc}{\contentsline {part}{第III部\hspace  {1\zw }実験結果}{28}{part.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6}実験目的、仮説}{28}{section.6}\protected@file@percent }
+\newlabel{equation:ディリクレα}{{4}{15}{Latent Dirichlet Allocation}{equation.4.4}{}}
+\newlabel{equation:ガンマα}{{5}{15}{Latent Dirichlet Allocation}{equation.4.5}{}}
+\newlabel{equation:ディリクレβ}{{6}{15}{Latent Dirichlet Allocation}{equation.4.6}{}}
+\newlabel{equation:ガンマβ}{{7}{15}{Latent Dirichlet Allocation}{equation.4.7}{}}
+\newlabel{equation:LDA}{{8}{16}{Latent Dirichlet Allocation}{equation.4.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Biterm Topic Model}{17}{subsection.4.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}提案手法}{18}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}データ収集}{18}{subsection.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces YouTube Data API v3 で取得できるコメント情報}}{18}{table.8}\protected@file@percent }
+\newlabel{table:データ収集}{{8}{18}{YouTube Data API v3 で取得できるコメント情報}{table.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces 抽出したコメントの一例}}{18}{figure.8}\protected@file@percent }
+\newlabel{fig:元コメント}{{8}{18}{抽出したコメントの一例}{figure.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}前処理手法}{19}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.1}クリーニング処理}{19}{subsubsection.5.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces 前処理後のコメント}}{20}{figure.9}\protected@file@percent }
+\newlabel{fig:前処理}{{9}{20}{前処理後のコメント}{figure.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.2.2}MeCabによる形態素解析及び分かち書き}{20}{subsubsection.5.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces 形態素解析辞書の比較}}{21}{table.9}\protected@file@percent }
+\newlabel{table:辞書比較}{{9}{21}{形態素解析辞書の比較}{table.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces 辞書による形態素解析結果の比較}}{21}{figure.10}\protected@file@percent }
+\newlabel{fig:形態素解析}{{10}{21}{辞書による形態素解析結果の比較}{figure.10}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}BTMによるトピック抽出}{22}{subsection.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}文章生成}{23}{subsection.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces ChatGPTを用いた文章生成例}}{23}{figure.11}\protected@file@percent }
+\newlabel{fig:文章生成}{{11}{23}{ChatGPTを用いた文章生成例}{figure.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}文章間の類似度計算}{24}{subsection.5.5}\protected@file@percent }
+\newlabel{equation:Cos類似度}{{9}{24}{文章間の類似度計算}{equation.5.9}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.1}TF-IDF}{24}{subsubsection.5.5.1}\protected@file@percent }
+\newlabel{equation:TF}{{10}{24}{TF-IDF}{equation.5.10}{}}
+\newlabel{equation:IDF}{{11}{24}{TF-IDF}{equation.5.11}{}}
+\newlabel{equation:TF-IDF}{{12}{25}{TF-IDF}{equation.5.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.5.2}BERT}{25}{subsubsection.5.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces NSPによる文章のつながり判定例}}{25}{figure.12}\protected@file@percent }
+\newlabel{fig:BERT}{{12}{25}{NSPによる文章のつながり判定例}{figure.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}提案手法の精度検証}{26}{subsection.5.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Confusion Matrix}}{27}{figure.13}\protected@file@percent }
+\newlabel{fig:Confusion Matrix}{{13}{27}{Confusion Matrix}{figure.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces 提案手法のConfusion Matrix}}{28}{figure.14}\protected@file@percent }
+\newlabel{fig:提案手法のconfusion}{{14}{28}{提案手法のConfusion Matrix}{figure.14}{}}
+\@writefile{toc}{\contentsline {part}{第III部\hspace  {1\zw }実験結果}{30}{part.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}実験目的、仮説}{30}{section.6}\protected@file@percent }
 \bibcite{機械学習を用いたレビュー評価}{1}
 \bibcite{トピックモデル洗練化}{2}
 \bibcite{点数評価}{3}
 \bibcite{グルメサイト}{4}
 \bibcite{LDA}{5}
 \bibcite{BTM}{6}
-\gdef \@abspage@last{30}
+\gdef \@abspage@last{32}
