@@ -543,7 +543,7 @@ LDAの生成過程を図\ref{fig:グラフィカルモデル1}のグラフィカ
 
 このように, LDAは文書集合の学習データからトピック分布$\boldsymbol{\theta}$と単語分布$\boldsymbol{\phi}$を推定し,  
 与えられた文書が推定した分布によって生成されると仮定した確率生成モデルである. 
-LDAの出力であるトピック分布$\boldsymbol{\theta}$と単語分布$\boldsymbol{\phi}$は式(\ref{equation:LDA})で表せられる. 
+LDAの出力であるトピック分布$\boldsymbol{\theta}$と単語分布$\boldsymbol{\phi}$の同時分布は式(\ref{equation:LDA})で表せられる. 
 \vspace{5truept}
 
 \begin{equation}
@@ -570,7 +570,63 @@ LDAで推定した単語分布は文書集合に出現する全ての単語を�
 \subsection{Biterm Topic Model}
 Biterm Topic Model(BTM)はトピックモデルの一種であり, 特に短い文書に適したモデルである. 
 LDAとは異なり, 文書レベルではなく文書集合全体の単語の対(Biterm)を直接モデリングすることにより
-短い文書における単語のスパース性の問題を緩和している. 以下にBTMの詳細な説明を示す. 
+短い文書における単語のスパース性の問題を緩和している. 
+図\ref{fig:BTM生成過程}にBTMの生成過程を, BTMのグラフィカルモデルを図\ref{fig:BTMのグラフィカルモデル}に示す. \\
+% \begin{enumerate}
+%     \item for トピック $z=1, \cdots, Z$
+%     \begin{enumerate}
+%         \item 単語分布を作成 $\boldsymbol{\phi}_z\sim \textrm{Dirichlet}(\beta)$
+%     \end{enumerate}
+%     \item 文書全体に対してトピック分布$\boldsymbol{\theta}\sim \textrm{Dirichlet}(\alpha)$
+%     \item biterm集合$\boldsymbol{B}$における各biterm $b$に対して
+%     \begin{enumerate}
+%         \item トピックを生成 $z\sim \textrm{Multi}(\boldsymbol{\theta})$
+%         \item 2つの単語を生成 $w_i, w_j\sim \textrm{Multi}(\boldsymbol{\phi}_z)$
+%     \end{enumerate}
+% \end{enumerate}
+\begin{figure}[h]
+    \centering
+    \fbox{\includegraphics[width = 9cm]{images/BTM生成過程.png}}
+    \caption{BTMの生成過程}
+    \label{fig:BTM生成過程}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 12cm]{images/BTMグラフィカルモデル.drawio.png}
+    \caption{BTMのグラフィカルモデル}
+    \label{fig:BTMのグラフィカルモデル}
+\end{figure}
+\newpage
+まず, 各トピック$z$に対して単語分布$\boldsymbol{\phi}_z$がディリクレ分布に従って生成される. 
+次に, 文書全体に対してトピック分布$\boldsymbol{\theta}$がディリクレ分布に従って生成される. 
+LDAでは各文書に対してトピック分布が存在していたため, 短い文書や単語が少ない文書ではトピックを適切に
+推定することが困難であるが, BTMでは文書全体で集約された単語の共起性を利用するためLDAに比べて優れたトピックの推定が行える.
+そして, 各biterm $b$に対してトピック分布$\boldsymbol{\theta}$に従いトピック$z$が選択される. 
+選択されたトピック$z$の単語分布$\boldsymbol{\phi}_z$から二つの単語を生成する. 
+図\ref{fig:BTM生成過程}の手順に従ってbiterm $b = (w_i, w_j)$の同時確率は式(\ref{equation:BTM同時確率})のように, 
+文書全体の尤度は式(\ref{equation:尤度})のように表せられる. \\
+\begin{align}
+    P(b) &= \sum_{z}P(z)P(w_i|z)P(w_j|z)\notag\\
+         &= \sum_{z}\theta_z \phi_{i|z} \phi_{j|z}
+    \label{equation:BTM同時確率}
+\end{align}
+\vspace{3truept}
+
+\begin{equation}
+    P(B) = \prod_{(i,j)}\sum_{z}\theta_z \phi_{i|z} \phi_{j|z}
+    \label{equation:尤度}
+\end{equation}
+\vspace{5truept}
+
+このようにBTMではbitermという二単語の対をモデル化の基本単位としているため, 
+単語の数が少ないような短い文書でも文書集合全体の単語の共起性をとらえることでトピック推定の精度を向上させている. 
+また, LDAとは異なり単一の文章を生成するという仮定ではなく, 文書集合から抽出したbitermを対象にそれらを生成するという仮定を持つ. 
+つまり, 短い文書の場合にLDAでは少ない単語の情報から文書ごとのトピック分布を推定するのに対し, BTMでは全文書に出現する単語の共起
+から文書集合全体のトピック分布を推定するため精度が高くなる. 
+本研究で実験対象とするYouTubeの動画に対するコメントは比較的一文が短いものが多く, BTMの優位性が予測される. 
+BTMを用いた具体的な提案手法は5.3節で述べる. 
+
+
 
 
 
