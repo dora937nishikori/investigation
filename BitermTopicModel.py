@@ -4,6 +4,7 @@ import pandas as pd
 import csv
 import pprint
 import itertools
+import tmplot as tmp
 
 # IMPORTING DATA
 df = pd.read_csv(
@@ -52,8 +53,9 @@ for i, topic_dist in enumerate(model.matrix_topics_words_):
 
 print('perplexity:',perplexity)
 print('coherence:',coherence)
+print(X)
 #print(*vocab_dict)
-
+#print(*vocabulary)
 '''
 #50単語リスト
 new_l = []
