@@ -808,8 +808,29 @@ $\alpha, \beta$などが重要なパラメータである.
 を採用しており, その値は対象とする動画によって最適な値を求めて実験を行う. 
 以上の手順通りBTMを学習し, 推定した各トピックごとの単語分布より, 出現確率上位$n$単語を抽出する. 
 $n$は後述する文章生成の際に冗長な文とならないような値を選択する必要があり, 本研究では$n=10$を基本的な値とした. 
-図にBTMによって抽出したトピックとその出現確率上位10単語の例を示す. 
+図\ref{fig:BTM出力例}にBTMによって抽出したトピック($T=5$)とその出現確率上位10単語の例を示す. 
+これは新作のカップラーメンを紹介している動画に対するコメントであり, 図\ref{fig:BTM出力例}の結果にあるように
+「ラーメン」や「味噌ラーメン」, 商品開発者である「ヒカキン」などの単語が抽出できていることが分かる. 
+また, 図下部にあるperplexityはトピックモデルの性能評価によく使われている指標である. 
+perplexityはモデルに従って単語を選ぶ困難さを表していて, 
+各単語の出現確率の逆数の幾何平均で定義されている(式(\ref{equation:perplexity})).
+直感的にはperplexityはモデルによって生成する単語の候補数に対応していて, 候補数が少ない方が正解となる単語を当てやすいため,  
+perplexityは低い方がモデルとしての性能が高いことを示している. 
+本研究ではこのperplexityをモデルの性能評価に用いてハイパーパラメータ$\alpha, \beta$を調整する. \\
+\vspace{5truept}
 
+\begin{equation}
+    \textrm{perplexity(\bm{W}|M)} = exp\left(-\frac{\sum_{d=1}^{D}\log p(\bm{w}_d|M)}{\sum_{d=1}^{D}N_d}\right)
+    \label{equation:perplexity}
+\end{equation}
+\vspace{30truept}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width = 14.6cm]{images/BTM出力例.png}
+    \caption{BTMの出力例}
+    \label{fig:BTM出力例}
+\end{figure}
 
 
 

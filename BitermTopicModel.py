@@ -53,7 +53,6 @@ for i, topic_dist in enumerate(model.matrix_topics_words_):
 
 print('perplexity:',perplexity)
 print('coherence:',coherence)
-print(X)
 #print(*vocab_dict)
 #print(*vocabulary)
 '''
