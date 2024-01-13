@@ -1110,7 +1110,7 @@ F1-measureを用いた総合的な評価も有効であると考えられる. �
 Precision, F1-measureを主に用いることとする. 
 
 \newpage
-\part{実験結果}
+\part{実験}
 第Ⅲ部では第Ⅱ部で述べた本研究の提案手法を用いて実験を行った結果を述べる. 
 改めて, 本研究の研究目的はYouTube上で商品やサービスを宣伝している動画のコメントを分析し, 
 その動画で宣伝している商品やサービスに関連しているコメントを抽出するシステムの作成である. 
@@ -1122,7 +1122,47 @@ Precision, F1-measureを主に用いることとする.
 この仮説の妥当性, 及びシステムの精度を検証するために人手でアノテーションしたデータとのConfusion Matrixを計算し, 
 様々な指標で分析を行った. 
 \section
-{実データによる実験}
+{実データを用いた実験結果}
+本節では実際のYouTube上の動画からコメントを抽出し, 実験を行った結果を述べる. 
+実験対象とした動画の選定には, 商品・サービスや料理のレシピなどを紹介・宣伝していることを条件としている. 
+また, その中でもコメントの総数や視聴者層の違い, 宣伝しているチャンネルが企業であるか個人であるかの違い
+など, 様々な条件下での動画を対象として実験を行うことで提案手法が成立する条件を考察する. 
+\subsection{みそきん(カップラーメン)の紹介動画}
+YouTuberのヒカキンが自身で商品開発を行った「みそきん(味噌味のカップラーメン)」を発表し, 
+商品の概要を紹介している動画[7]からコメントを抽出した. 
+以下に詳細な実験条件を示す. 
+\vspace{10truept}
+
+\begin{description}
+    \item[コメント件数]\mbox{}\\
+    抽出したコメントは1517件であり, そこから前処理の過程で削除された文章(絵文字のみの文章や一文字のみの文章)
+    を除いた1380件を用いてBTMで分析した. 
+    \item[前処理] \mbox{}\\
+    前処理の形態素解析の段階では「名詞」と「形容詞」のみを抽出し分かち書きを行った. 
+    \item[BTMの各パラメータ]\mbox{}
+    \begin{itemize}
+        \item トピック数 $T=5$
+        \item 単語分布から抽出する出現確率上位の単語数 $n = 10$
+        \item 各文章ごとに考慮する単語数 $M=10$
+        \item 反復回数 $\textrm{iterations} = 20$
+        \item ディリクレ分布のハイパーパラメータ $\alpha, \beta$\\
+        ここにハイパラの調整と結果
+    \end{itemize}
+\end{description}
+・抽出した単語例
+
+・プロンプト、生成結果
+
+・類似度にパターン結果比較、文章例
+
+・アノテーションの基準、結果
+
+・混同行列結果、指標の分析
+
+・LDAでの結果、比較
+
+・考察
+
 
 
 
@@ -1174,6 +1214,11 @@ Precision, F1-measureを主に用いることとする.
     Xiaohui Yan, Jiafeng Guo, Yanyan Lan, Xueqi Cheng :
     \newblock ``A Biterm Topic Model for Short Texts'', 
     \newblock WWW '13 Proceedings of the 22nd international conference on World Wide Web, pp.1445-1456, 2013.
+
+    \bibitem{みそきん}
+    HikakinTV. 「ヒカキンのカップラーメン『みそきん』が5/9発売！初のブランド『HIKAKIN PREMIUM』立ち上げました。」
+    \newblock 2023-04-27. 
+    \newblock https://www.youtube.com/watch?v=SyTY7-ZTens, (参照：2023-04-28)
 
      
 \end{thebibliography}

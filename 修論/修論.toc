@@ -21,5 +21,6 @@
 \contentsline {subsubsection}{\numberline {5.5.1}TF-IDF}{24}{subsubsection.5.5.1}%
 \contentsline {subsubsection}{\numberline {5.5.2}BERT}{25}{subsubsection.5.5.2}%
 \contentsline {subsection}{\numberline {5.6}提案手法の精度検証}{26}{subsection.5.6}%
-\contentsline {part}{第III部\hspace {1\zw }実験結果}{30}{part.3}%
-\contentsline {section}{\numberline {6}実データによる実験}{30}{section.6}%
+\contentsline {part}{第III部\hspace {1\zw }実験}{30}{part.3}%
+\contentsline {section}{\numberline {6}実データを用いた実験結果}{30}{section.6}%
+\contentsline {subsection}{\numberline {6.1}みそきん(カップラーメン)の紹介動画}{30}{subsection.6.1}%
