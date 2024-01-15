@@ -1210,7 +1210,7 @@ YouTuberのヒカキンが自身で商品開発を行った「みそきん(味�
 ChatGPTには各トピックの単語と文章生成のためのプロンプトを入力する. 
 入力したプロンプトは以下のとおりである. 基本的には5.4節で述べた通りのプロンプトを入力するが, 対象の動画にのみ
 必要なプロンプトがあれば加えて入力する. 今回の「みそきん」の場合では, 商品の開発者である「ヒカキン」, 「hikakin」
-を人名として指定する必要がある. 
+を人名として指定する必要がある. \\
 \begin{itemize}
     \item 空白区切りで入力する単語を使って文章を生成してください.
     \item 全ての単語を使用してください.
@@ -1220,9 +1220,11 @@ ChatGPTには各トピックの単語と文章生成のためのプロンプト�
 \end{itemize}
 
 \newpage
-・類似度にパターン結果比較、文章例
-それぞれ5分くらい抜き出して考察
+・文章生成結果
 
+・類似度にパターン結果比較、文章例、それぞれ5文くらい抜き出して考察
+
+\newpage
 文章間の類似度を計算し, 値が高いコメントを「商品との関連性がある」と判断するという仮説を検証するため, 
 人手でアノテーションして正解ラベルを付与したデータと比較して分析を行う. 
 「みそきん」のコメントに対するアノテーションは以下の基準で行った. 
@@ -1269,44 +1271,82 @@ BERTを用いて類似度計算したデータから求めたConfusion Matrixを
 \begin{figure}[ht]
     \centering
     \includegraphics[width = 11cm]{images/みそきん行列.drawio.png}
-    \caption{みそきん(BERT)のConfusion Matrix}
+    \caption{みそきん(BERT)のConfusion Matrix (正解ラベルと同数のラベル付与)}
     \label{fig:みそきん(BERT)のconfusion}
 \end{figure}
 \vspace{10truept}
 
 図\ref{fig:みそきん(BERT)のconfusion}のConfusion Matrixから各指標を計算すると以下のような結果が得られる. 
-\begin{equation}
-    \textrm{Accuracy} = \dfrac{TP+TN}{TP+FP+FN+TN} = 0.6122\notag
-\end{equation}
+この結果より,  「みそきん」に対する提案手法の全体的な正解率はAccuracy = 0.6122であることが分かった. 
+Recall, Precision, F1-measure = 0.6938であり, 提案手法で予測した関連性があるコメントが約7割正解していること, 
+また人手で関連性があると判断したコメントのうち約7割が提案手法でも関連性ありと予測されていることが分かる. 
+\vspace{10truept}
 
 \begin{equation}
-    \textrm{Sensitivity・Recall} = \dfrac{TP}{TP+FN}\notag
+    \textrm{Accuracy} = \dfrac{TP+TN}{TP+FP+FN+TN} = 0.612203...
 \end{equation}
+\vspace{5truept}
 
 \begin{equation}
-    \textrm{Precision} = \dfrac{TP}{TP+FP}\notag
+    \textrm{Sensitivity・Recall} = \dfrac{TP}{TP+FN} = 0.693790...
 \end{equation}
+\vspace{5truept}
 
 \begin{equation}
-    \textrm{F1-measure} = \dfrac{2\times \textrm{Precision}\times \textrm{Recall}}{\textrm{Precision}+\textrm{Recall}} = \dfrac{2\times TP}{2\times TP+FP+FN}\notag
+    \textrm{Precision} = \dfrac{TP}{TP+FP} = 0.693790...
 \end{equation}
+\vspace{5truept}
 
+\begin{equation}
+    \textrm{F1-measure} = \dfrac{2\times \textrm{Precision}\times \textrm{Recall}}{\textrm{Precision}+\textrm{Recall}} = \dfrac{2\times TP}{2\times TP+FP+FN} = 0.693790...
+\end{equation}
+\vspace{10truept}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width = 11cm]{images/みそきん行列tf-idf.drawio.png}
-    \caption{みそきん(TF-IDF)のConfusion Matrix}
+    \caption{みそきん(TF-IDF)のConfusion Matrix (正解ラベルと同数のラベル付与)}
     \label{fig:みそきん(TF-IDF)のconfusion}
 \end{figure}
 
-行列の表、各指標の計算式と結果、それの考察
+\newpage
+図\ref{fig:みそきん(TF-IDF)のconfusion}のConfusion Matrixから各指標を計算すると以下のような結果が得られる. 
+TF-IDFを用いて類似度計算したデータを用いた場合全体の正解率は0.5580となり, BERTを用いて類似度計算したデータよりも低い値を示した. 
+また, Recall, Precision, F1-measureも同様にBERTに比べて低く, 提案手法で予測したコメントのうち約6.5割が実際に
+関連性があるコメントであること, また人手で関連性ありと判断したコメントのうち約6.5割が提案手法でも関連性ありと予測された結果となった. 
+\vspace{10truept}
 
-・LDAでの結果、比較
+\begin{equation}
+    \textrm{Accuracy} = \dfrac{TP+TN}{TP+FP+FN+TN} = 0.557966...
+\end{equation}
+\vspace{5truept}
 
-・考察
+\begin{equation}
+    \textrm{Sensitivity・Recall} = \dfrac{TP}{TP+FN} = 0.650963...
+\end{equation}
+\vspace{5truept}
 
+\begin{equation}
+    \textrm{Precision} = \dfrac{TP}{TP+FP} = 0.650963...
+\end{equation}
+\vspace{5truept}
 
+\begin{equation}
+    \textrm{F1-measure} = \dfrac{2\times \textrm{Precision}\times \textrm{Recall}}{\textrm{Precision}+\textrm{Recall}} = \dfrac{2\times TP}{2\times TP+FP+FN} = 0.650963...
+\end{equation}
+\vspace{10truept}
 
+次に, 各類似度計算法によって計算した文章間の類似度の上位25\%, 50\%, 75\%に対して「関連性-高」のラベルを付与して
+同様の実験を行った結果を示す. 
+\vspace{10truept}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 11cm]{images/BERT25.drawio.png}
+    \caption{みそきん(BERT)のConfusion Matrix (上位25\%を関連性-高)}
+    \label{fig:みそBERT25}
+\end{figure}
+%25,50,75の表はまとめた方が良さそう
 
 
 
