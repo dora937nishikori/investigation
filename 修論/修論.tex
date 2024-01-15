@@ -1026,7 +1026,8 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
     正解率・正確度・精度などと呼ばれる, 全予測結果の中で正しい予測をしたもの(TP・TN)の割合のことである. 総合的なモデルの性能を示すのに用いられることが多いが, 
     クラスに偏りがある場合(例：Positiveが極端に多く, Negativeが極端に少ない), はモデルの性能を正しく評価できないこともある. \\
     \begin{equation}
-        \textrm{Accuracy} = \dfrac{TP+TN}{TP+FP+FN+TN}\notag
+        \textrm{Accuracy} = \dfrac{TP+TN}{TP+FP+FN+TN}
+        \label{equation:Accuracy}
     \end{equation}
     \vspace{5truept}
 
@@ -1034,7 +1035,8 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
     不正解率と呼ばれる, Accuracyの逆で全予測結果の中で誤った予測をしたもの(FP・FN)の割合のことである.
     Accuracyと同様に, クラスの偏りがある場合にはモデルの性能を正しく評価できないこともある. \\
     \begin{equation}
-        \textrm{Error Rate} = \dfrac{FP+FN}{TP+FP+FN+TN}\notag
+        \textrm{Error Rate} = \dfrac{FP+FN}{TP+FP+FN+TN}
+        \label{equation:Error}
     \end{equation}
     \vspace{5truept}
 
@@ -1042,7 +1044,8 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
     感度・再現率・検出率などと呼ばれる, 正解クラスがPositiveであるとき, 予測モデルもPositiveだと判定した割合のことである. 
     実際に正解クラス(例：癌の検出など)を見逃さないことが重要な事象の際に重視される指標である. \\
     \begin{equation}
-        \textrm{Sensitivity・Recall} = \dfrac{TP}{TP+FN}\notag
+        \textrm{Sensitivity・Recall} = \dfrac{TP}{TP+FN}
+        \label{equation:Recall}
     \end{equation}
     \vspace{5truept}
 
@@ -1050,7 +1053,8 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
     特異度と呼ばれる, 正解がNegativeであるとき, 予測モデルもNegativeだと判定した割合のことである. 
     疫病検査の例では, 罹患していない人の結果が陰性となる率であり, 負のケースを正確に識別することが重要な事象の際に重視される. \\
     \begin{equation}
-        \textrm{Specificity} = \dfrac{TN}{FP+TN}\notag
+        \textrm{Specificity} = \dfrac{TN}{FP+TN}
+        \label{equation:Specificity}
     \end{equation}
     \vspace{5truept}
 
@@ -1058,7 +1062,8 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
     適合率と呼ばれる, モデルがPositiveと予測したときに実際にそれがPositiveである割合のことである. 
     偽陽性(誤った正の予測)を最小限に抑えたい事象のときに重視される指標である. \\
     \begin{equation}
-        \textrm{Precision} = \dfrac{TP}{TP+FP}\notag
+        \textrm{Precision} = \dfrac{TP}{TP+FP}
+        \label{equation:Precision}
     \end{equation}
     \vspace{5truept}
 
@@ -1066,7 +1071,8 @@ FP(False Positive)はNegativeラベルが付いているものを誤って「Pos
     F1値・F値などと呼ばれる, Precision(適合率)とRecall(再現率)の調和平均のことである. 
     一般的にPrecisionとRecallの間にはトレードオフの関係があるが, そのバランスを取る必要がある事象のときに重視される指標である. \\
     \begin{equation}
-        \textrm{F1-measure} = \dfrac{2\times \textrm{Precision}\times \textrm{Recall}}{\textrm{Precision}+\textrm{Recall}} = \dfrac{2\times TP}{2\times TP+FP+FN}\notag
+        \textrm{F1-measure} = \dfrac{2\times \textrm{Precision}\times \textrm{Recall}}{\textrm{Precision}+\textrm{Recall}} = \dfrac{2\times TP}{2\times TP+FP+FN}
+        \label{equation:F1}
     \end{equation}
     \vspace{5truept}
 
@@ -1250,8 +1256,49 @@ ChatGPTには各トピックの単語と文章生成のためのプロンプト�
 それ以下の類似度のコメントには「関連性-低」のラベルを付与する. 
 「みそきん」の場合, 正解ラベルは「関連性-高」が934件, 「関連性-低」が541件であり, 同じ数だけラベル付けした
 データを用いて, 二値分類のConfusion Matrixを計算する. 
+しかしこの手法ではConfusion MatrixのFP, FNの値が同じになり, Precision, Recall, 及びF1-measure
+が同じ値を示してしまう(式(\ref{equation:Recall}), (\ref{equation:Precision}), (\ref{equation:F1})). 
+そのため, 類似度上位25\%, 50\%, 75\%の文章に「関連性-高」のラベルを付与したデータを作成し, 同様にConfusion Matrix
+を計算することで提案手法の精度をより深く考察する. 
 
-・混同行列結果、指標の分析, 
+まず初めに, 人手の正解ラベルと同数のラベルを付与した結果について述べる. 
+BERTを用いて類似度計算したデータから求めたConfusion Matrixを図\ref{fig:みそきん(BERT)のconfusion}に, TF-IDFを用いて類似度計算したデータから
+求めたConfusion Matrixを図\ref{fig:みそきん(TF-IDF)のconfusion}に示す. 
+
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 11cm]{images/みそきん行列.drawio.png}
+    \caption{みそきん(BERT)のConfusion Matrix}
+    \label{fig:みそきん(BERT)のconfusion}
+\end{figure}
+\vspace{10truept}
+
+図\ref{fig:みそきん(BERT)のconfusion}のConfusion Matrixから各指標を計算すると以下のような結果が得られる. 
+\begin{equation}
+    \textrm{Accuracy} = \dfrac{TP+TN}{TP+FP+FN+TN} = 0.6122\notag
+\end{equation}
+
+\begin{equation}
+    \textrm{Sensitivity・Recall} = \dfrac{TP}{TP+FN}\notag
+\end{equation}
+
+\begin{equation}
+    \textrm{Precision} = \dfrac{TP}{TP+FP}\notag
+\end{equation}
+
+\begin{equation}
+    \textrm{F1-measure} = \dfrac{2\times \textrm{Precision}\times \textrm{Recall}}{\textrm{Precision}+\textrm{Recall}} = \dfrac{2\times TP}{2\times TP+FP+FN}\notag
+\end{equation}
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 11cm]{images/みそきん行列tf-idf.drawio.png}
+    \caption{みそきん(TF-IDF)のConfusion Matrix}
+    \label{fig:みそきん(TF-IDF)のconfusion}
+\end{figure}
+
 行列の表、各指標の計算式と結果、それの考察
 
 ・LDAでの結果、比較

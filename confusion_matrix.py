@@ -3,7 +3,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, r
 
 
 # CSVファイルの読み込み
-df = pd.read_csv('Misokin\BERT予測データ.csv', header=None)
+df = pd.read_csv('Misokin\TF-IDF90%.csv', header=None)
 y_true = df[0]  # 正解ラベル一列目
 y_pred = df[1]  # 予測ラベル二列目
 
