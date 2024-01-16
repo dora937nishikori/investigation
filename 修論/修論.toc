@@ -24,3 +24,8 @@
 \contentsline {part}{第III部\hspace {1\zw }実験}{30}{part.3}%
 \contentsline {section}{\numberline {6}実データを用いた実験結果と考察}{30}{section.6}%
 \contentsline {subsection}{\numberline {6.1}みそきん(カップラーメン)の紹介動画}{30}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}BTMによって抽出した単語リスト}{31}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}文章生成}{31}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}二種の類似度計算法による結果}{32}{subsubsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.4}提案手法の精度検証結果}{33}{subsubsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.5}考察}{36}{subsubsection.6.1.5}%
