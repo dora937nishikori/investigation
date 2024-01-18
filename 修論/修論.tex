@@ -1278,34 +1278,143 @@ BERTを用いた類似度計算ではほとんどのコメントが0.7\sim0.96�
 本研究では類似度計算した結果の数値が重要というわけではなく, 商品との関連性があるコメントの類似度が高く算出
 されることが重要なため, 図\ref{fig:みそきん類似度BERT},\ref{fig:みそきん類似度tf-idf}からではどちらの手法が本研究において適切であるかは判断できない. 
 しかし, 図\ref{fig:みそきん類似度tf-idf}からTF-IDFを用いた類似度計算では低い類似度を示すコメントが多いことが分かり, 
-そのコメントは文章の長さが短い傾向にあることが分かった(図抜き出した図). 
-反対にBERTを用いた類似度計算では長さが短い文章でも類似度が高いケースが存在していたため(図), 
+そのコメントは文章の長さが短い傾向にあることが分かった(表\ref{table:みそきん類似度結果TF-IDF}). 
+反対にBERTを用いた類似度計算では長さが短い文章でも類似度が高いケースが存在していたため(表\ref{table:みそきん類似度結果BERT}), 
 YouTubeのコメントのように短い文章を多く含むテキストデータに対する分析の場合, BERTによる類似度計算の方が優れていると
 考えられる. 
 \newpage
 \begin{figure}[h]
     \centering
-    \includegraphics[width = 12.5cm]{images/みそきん類似度BERT.png}
+    \includegraphics[width = 13.8cm]{images/みそきん類似度BERT.png}
     \caption{BERTによる類似度計算結果}
     \label{fig:みそきん類似度BERT}
 \end{figure}
-\vspace{20truept}
+\vspace{10truept}
 
+\begin{table}[ht]
+    \caption{BERTによる類似度計算結果の一例}
+    \vspace{5truept}
+
+    \centering
+    \begin{tabular}{|r|l|}
+        \hline
+        類似度結果 & 前処理済みの元コメント\\
+        \hline\hline
+        0.95739305 & 
+        \begin{tabular}{l}
+            アレルギーの関係で小麦がたくさん食べれないのでメシ版が凄く嬉しい味噌\\大好きです絶対食べます\\
+        \end{tabular}\\
+        \hline
+        0.943691134 & 
+        \begin{tabular}{l}
+            味噌ラーメンからもやしメンマネギ赤い調味油って感じがくるり意識してそ\\うで好き\\
+        \end{tabular}\\
+        \hline
+        0.939244092 & 
+        \begin{tabular}{l}
+            味噌ってのがいいですね食べてみます次あれば豚骨も期待してます\\
+        \end{tabular}\\
+        \hline
+        0.936367273 & 
+        \begin{tabular}{l}
+            白味噌を入れることによってガツンとくる旨味が鈍くなる気がするけどどう\\なんだろうか早く買って食べたい\\
+        \end{tabular}\\
+        \hline
+        0.914627552 & 
+        \begin{tabular}{l}
+            食べてみたいです楽しみ\\
+        \end{tabular}\\
+        \hline
+        0.905122876 & 
+        \begin{tabular}{l}
+            今後色んな味出して欲しい\\
+        \end{tabular}\\
+        \hline
+        0.903024077 & 
+        \begin{tabular}{l}
+            ファミマローソンでも販売して欲しい\\
+        \end{tabular}\\
+        \hline
+        0.901709378 & 
+        \begin{tabular}{l}
+            それでも人工甘味料入ってる\\
+        \end{tabular}\\
+        \hline
+        0.890335798 & 
+        \begin{tabular}{l}
+            味噌味以外も出してほしい\\
+        \end{tabular}\\
+        \hline
+    \end{tabular}
+    \label{table:みそきん類似度結果BERT}
+\end{table}
+
+\newpage
 \begin{figure}[ht]
     \centering
-    \includegraphics[width = 12.5cm]{images/みそきん類似度tf-idf.png}
+    \includegraphics[width = 13.2cm]{images/みそきん類似度tf-idf.png}
     \caption{TF-IDFによる類似度計算結果}
     \label{fig:みそきん類似度tf-idf}
 \end{figure}
+\vspace{10truept}
 
+\begin{table}[ht]
+    \caption{TF-IDFによる類似度計算結果の一例}
+    \vspace{5truept}
 
-
-
-
-
-
-
-
+    \centering
+    \begin{tabular}{|r|l|}
+        \hline
+        類似度結果 & 前処理済みの元コメント\\
+        \hline\hline
+        0.933934656 & 
+        \begin{tabular}{l}
+            味噌ってのがいいですね食べてみます次あれば豚骨も期待してます\\
+        \end{tabular}\\
+        \hline
+        0.927453136 & 
+        \begin{tabular}{l}
+            アレルギーの関係で小麦がたくさん食べれないのでメシ版が凄く嬉しい味噌\\大好きです絶対食べます\\
+        \end{tabular}\\
+        \hline
+        0.914770669 & 
+        \begin{tabular}{l}
+            白味噌を入れることによってガツンとくる旨味が鈍くなる気がするけどどう\\なんだろうか早く買って食べたい\\
+        \end{tabular}\\
+        \hline
+        0.912356335 & 
+        \begin{tabular}{l}
+            味噌ラーメンからもやしメンマネギ赤い調味油って感じがくるり意識してそ\\うで好き\\
+        \end{tabular}\\
+        \hline
+        0.883447275 & 
+        \begin{tabular}{l}
+            ファミマローソンでも販売して欲しい\\
+        \end{tabular}\\
+        \hline
+        0.831779144 & 
+        \begin{tabular}{l}
+            今後色んな味出して欲しい\\
+        \end{tabular}\\
+        \hline
+        0.800387187 & 
+        \begin{tabular}{l}
+            味噌味以外も出してほしい\\
+        \end{tabular}\\
+        \hline
+        0.710342807 & 
+        \begin{tabular}{l}
+            食べてみたいです楽しみ\\
+        \end{tabular}\\
+        \hline
+        0.648517863 & 
+        \begin{tabular}{l}
+            それでも人工甘味料入ってる\\
+        \end{tabular}\\
+        \hline
+    \end{tabular}
+    \label{table:みそきん類似度結果TF-IDF}
+\end{table}
 
 \newpage
 \subsubsection{提案手法の精度検証結果}
@@ -1450,7 +1559,8 @@ F1-measureはPrecisionとRecallの調和平均であり, Accuracyと同様に全
 次に, TF-IDFを用いて類似度計算したデータに閾値を設定してラベルを付与した結果から計算した各指標を表\ref{table:みそTF-IDF閾値}に示す. 
 BERTでの結果(表\ref{table:みそBERT閾値})と比較すると, 対応する全ての値が低いことが分かる. 
 また, 閾値を低くするにつれてPrecisionが低くなることや, Recall・F1-measureが高くなることなどは一致しており, 
-類似度計算法による差異は値のみであることが分かった. 
+類似度計算法による差異は値のみであることが分かった. そのため, 本研究に対してより有効な類似度計算法はBERTで文章をベクトル化
+し, Cos類似度を計算する方法であると考えられる. 
 
 \vspace{10truept}
 
@@ -1462,8 +1572,10 @@ BERTでの結果(表\ref{table:みそBERT閾値})と比較すると, 対応す�
     \includegraphics[width = 14cm]{images/TF-IDF閾値.drawio.png}
     \label{table:みそTF-IDF閾値}
 \end{table}
-
-\subsubsection{考察}
+\subsubsection{LDAとの比較}
+\newpage
+\subsection{考察}
+6節で述べてきた実験結果より, 提案手法の有用性, 及び仮説の検証結果について考察する. 
 
 
 
