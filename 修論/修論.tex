@@ -1457,19 +1457,21 @@ YouTubeのコメントのように短い文章を多く含むテキストデー�
 を計算することで提案手法の精度をより深く考察する. 
 
 まず初めに, 人手の正解ラベルと同数のラベルを付与した結果について述べる. 
-BERTを用いて類似度計算したデータから求めたConfusion Matrixを図\ref{fig:みそきん(BERT)のconfusion}に, TF-IDFを用いて類似度計算したデータから
-求めたConfusion Matrixを図\ref{fig:みそきん(TF-IDF)のconfusion}に示す. 
+BERTを用いて類似度計算したデータから求めたConfusion Matrixを表\ref{table:みそきん(BERT)のconfusion}に, TF-IDFを用いて類似度計算したデータから
+求めたConfusion Matrixを表\ref{table:みそきん(TF-IDF)のconfusion}に示す. 
 
 \newpage
-\begin{figure}[ht]
+\begin{table}[ht]
     \centering
-    \includegraphics[width = 11cm]{images/みそきん行列.drawio.png}
     \caption{みそきん(BERT)のConfusion Matrix (正解ラベルと同数のラベル付与)}
-    \label{fig:みそきん(BERT)のconfusion}
-\end{figure}
+    \vspace{5truept}
+
+    \includegraphics[width = 11cm]{images/みそきん行列.drawio.png}
+    \label{table:みそきん(BERT)のconfusion}
+\end{table}
 \vspace{10truept}
 
-図\ref{fig:みそきん(BERT)のconfusion}のConfusion Matrixから各指標を計算すると以下のような結果が得られる. 
+表\ref{table:みそきん(BERT)のconfusion}のConfusion Matrixから各指標を計算すると以下のような結果が得られる. 
 この結果より,  「みそきん」に対する提案手法の全体的な正解率はAccuracy = 0.6122であることが分かった. 
 Recall, Precision, F1-measure = 0.6938であり, 提案手法で予測した関連性があるコメントが約7割正解していること, 
 また人手で関連性があると判断したコメントのうち約7割が提案手法でも関連性ありと予測されていることが分かる. 
@@ -1495,15 +1497,17 @@ Recall, Precision, F1-measure = 0.6938であり, 提案手法で予測した関�
 \end{equation}
 \vspace{10truept}
 
-\begin{figure}[ht]
+\begin{table}[ht]
     \centering
-    \includegraphics[width = 11cm]{images/みそきん行列tf-idf.drawio.png}
     \caption{みそきん(TF-IDF)のConfusion Matrix (正解ラベルと同数のラベル付与)}
-    \label{fig:みそきん(TF-IDF)のconfusion}
-\end{figure}
+    \vspace{5truept}
+
+    \includegraphics[width = 11cm]{images/みそきん行列tf-idf.drawio.png}
+    \label{table:みそきん(TF-IDF)のconfusion}
+\end{table}
 
 \newpage
-図\ref{fig:みそきん(TF-IDF)のconfusion}のConfusion Matrixから各指標を計算すると以下のような結果が得られる. 
+表\ref{table:みそきん(TF-IDF)のconfusion}のConfusion Matrixから各指標を計算すると以下のような結果が得られる. 
 TF-IDFを用いて類似度計算したデータを用いた場合全体の正解率は0.5580となり, BERTを用いて類似度計算したデータよりも低い値を示した. 
 また, Recall, Precision, F1-measureも同様にBERTに比べて低く, 提案手法で予測したコメントのうち約6.5割が実際に
 関連性があるコメントであること, また人手で関連性ありと判断したコメントのうち約6.5割が提案手法でも関連性ありと予測された結果となった. 
@@ -1573,6 +1577,62 @@ BERTでの結果(表\ref{table:みそBERT閾値})と比較すると, 対応す�
     \label{table:みそTF-IDF閾値}
 \end{table}
 \subsubsection{LDAとの比較}
+提案手法で用いているBTMが代表的なトピックモデルであるLDAと比べて優れているかどうかを検証する. 
+BTMを用いてトピック推定, 及び単語抽出を行った過程(6.1.1節)をLDAで行い, その後は同様の手法で実験を行った. 
+表\ref{table:みそきん単語結果LDA}にLDAを用いてトピック推定を行い, トピックごとの出現確率上位10単語を抽出した結果を示す. 
+BTMと同様に商品に関連している単語を多く抽出
+\begin{table}[h]
+    \caption{LDAで抽出した単語リスト(みそきん)}
+    \vspace{5truept}
+
+    \centering
+    \begin{tabular}{|c|>{\centering}p{6em}|>{\centering}p{6em}|>{\centering}p{6em}|>{\centering}p{6em}|>{\centering\arraybackslash}p{6em}|}
+        \hline
+        & Topic 0 & Topic 1 & Topic 2 & Topic 3 & Topic 4\\
+        \hline\hline
+        1 & ラーメン & 0 & 0 & まずい & 絶対\\
+        \hline
+        2 & ヒカキン & ラーメン & ヒカキン & ヒカキン & hikakin\\
+        \hline
+        3 & 好き & ー & ヒカキン & 夢 & ラーメン\\
+        \hline
+        4 & 夢 & 嬉しい & 夢 & 美味しかっ & 美味し\\
+        \hline
+        5 & hikakin & 味 & 姿 & すごい & 夢\\
+        \hline
+        6 & 凄い & ラーメン & キン & ラーメン & 楽しみ\\
+        \hline
+        7 & 努力 & みそ & 売り切れ & youtube & 0\\
+        \hline
+        8 & 商品 & 報告 & 尊敬 & 努力 & セブン\\
+        \hline
+        9 & 尊敬 & 美味しかっ & hikakin & 尊敬 & 大好き\\
+        \hline
+        10 & 凄 & コンビニ & 嬉しい & hikakin & 発売\\
+        \hline
+    \end{tabular}
+    \label{table:みそきん単語結果LDA}
+\end{table}
+できているが, BTMとは異なり「0」や「ー」など, 数字や記号がいくつか抽出されている結果となった. 
+その後, 表\ref{table:みそきん類似度結果BERT}の単語を用いて文章を生成し, BERTによる文章のベクトル化を用いた類似度計算を行った. 
+6.1.4節で元のコメントに正解ラベルを付与したデータと, 同じ件数のラベルを付与した予測データからConfusion Matrixと各指標を
+計算した結果を表\ref{table:みそきんLDA_Confusion}に示す. 
+BTMを用いた手法の結果(表\ref{table:みそきん(BERT)のconfusion})と比較すると, LDAを用いた手法では正しく予測している
+TPとTNが減り, 誤った予測をしているFPとFNが増加している. 
+それに伴い, 計算した各指標もBTMの結果に比べて少し低くなっている. 
+このことから, 短いテキストに対するトピック推定及び単語抽出はLDAよりもBTMの方が優れていること, また
+提案手法で用いるトピックモデルとしてもBTMの方が優れていると考えられる. 
+
+\vspace{10truept}
+
+\begin{table}[h]
+    \centering
+    \caption{LDAを用いた手法のConfusion Matrix}
+    \vspace{5truept}
+
+    \includegraphics[width = 12cm]{images/みそきんLDA.drawio.png}
+    \label{table:みそきんLDA_Confusion}
+\end{table}
 \newpage
 \subsection{考察}
 6節で述べてきた実験結果より, 提案手法の有用性, 及び仮説の検証結果について考察する. 

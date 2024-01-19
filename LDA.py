@@ -4,7 +4,6 @@ import pandas as pd
 
 def main():
     # テキストファイルの読み込み
-    # ここではファイル名を 'wakachi_text.txt' と仮定します
     file_path = 'remove_pre_misokin_original.txt'
     with open(file_path, 'r', encoding='utf-8') as file:
         documents = file.readlines()
@@ -30,7 +29,7 @@ def main():
     df =pd.DataFrame()
     for t in range(num_topics):
         word=[]
-        for i, prob in lda_model.get_topic_terms(t, topn=15):
+        for i, prob in lda_model.get_topic_terms(t, topn=10):
             word.append(dictionary.id2token[int(i)])
         _ = pd.DataFrame([word],index=[f'topic{t+1}'])
         df = pd.concat([df, _], ignore_index = True, axis = 0)
