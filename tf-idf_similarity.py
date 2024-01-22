@@ -9,11 +9,11 @@ def tokenize_japanese(text):
 
 # 任意の5つの文章をリストに入力
 texts = [
-    "ヒカキンさんがラーメンが好きなのは夢のよう。hikakinの努力と商品には凄い尊敬を感じます。",
-    "ヒカキンさんがコンビニで0味噌ラーメンを食べた報告、嬉しいですね！美味しかったと聞いてよかったです。",
-    "ヒカキンさんがラーメンの夢を見て、その姿に尊敬します。0キンラーメンが売り切れるほど、hikakinの人気は嬉しいですね！",
-    "ヒカキンさんが夢でまずいラーメンを食べたけど、実際は美味しかったとyoutubeで報告してくれました。彼の努力とすごい成果には尊敬します！",
-    "hikakinさんが絶対に楽しみにしているセブンでの0ラーメンの発売、夢のように美味しいと聞いて大好きになりました！"
+    "今日、リュウジの料理動画を見て豚汁のレシピを作りました！最高に美味しくて、美味しいです！",
+    "リュウジのレシピで作った豚汁、美味しい！生姜とニンニクが効いた味噌汁、本当に美味しくて最高！",
+    "今日、リュウジのレシピで豚汁を作りました。至高の味で、大好きな料理シリーズがまた一つ増えました！美味しかった！",
+    "リュウジ兄さんの動画を見て料理した豚汁、家族にも大好評！本当に美味しいレシピでした。最高です！",
+    "豚汁にゴボウ、大根、ネギをたっぷり使い、味噌と白だしで味付け。生姜とニンニクで風味豊かな料理になりました！"
 ]
 
 # これらの文章のTF-IDFベクトルを計算
@@ -21,11 +21,11 @@ vectorizer = TfidfVectorizer(tokenizer=tokenize_japanese)
 tfidf_matrix = vectorizer.fit_transform(texts)
 
 # 入力CSVファイルを読み込み
-with open('pre_misokin_original.csv', 'r', encoding = 'utf-8') as file:
+with open('pre_豚汁元コメント.csv', 'r', encoding = 'utf-8') as file:
     reader = csv.reader(file)
 
     # 出力CSVファイルを準備
-    with open('tf-idf_output_LDA.csv', 'w', newline='', encoding = 'utf-8') as outfile:
+    with open('豚汁類似度TF-IDF.csv', 'w', newline='', encoding = 'utf-8') as outfile:
         writer = csv.writer(outfile)
 
         for row in reader:
