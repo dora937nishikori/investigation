@@ -1800,7 +1800,7 @@ ChatGPTに入力したプロンプトは以下の通りである.  「豚汁」�
 
 まず初めに, 人手の正解ラベルと同数のラベルを付与した結果について述べる. 
 BERTを用いて類似度計算したデータから求めたConfusion Matrixを表\ref{table:豚汁(BERT)のconfusion同件数}に, 
-TF-IDFを用いて類似度計算したデータから求めたConfusion Matrixを表に示す. 
+TF-IDFを用いて類似度計算したデータから求めたConfusion Matrixを表\ref{table:豚汁(TF-IDF)のconfusion同件数}に示す. 
 \vspace{10truept}
 
 \begin{table}[ht]
@@ -1812,10 +1812,70 @@ TF-IDFを用いて類似度計算したデータから求めたConfusion Matrix�
     \label{table:豚汁(BERT)のconfusion同件数}
 \end{table}
 
+表\ref{table:豚汁(BERT)のconfusion同件数}より, 「豚汁」に対する提案手法の全体的な正解率はAccuracy=0.703536であり, 
+「みそきん」よりも正解率が高いことが分かった. また, Precision, Recall, F1-measure=0.776643であり, 同様に「みそきん」
+よりも高い精度でコメントを分類できていることが分かった. Precisionが0.776643であることから, 
+提案手法で予測したコメントのうち約7.7割が人手で関連性があると判断したコメントであることが分かり, 提案手法に有用性があると判断することができると思われる. 
+Recallも同様に0.776643であり, 人手で関連性があると判断したコメントのうち約7.7割が提案手法で関連性があると予測されているため, 
+他のユーザーにとって有益なコメントの取りこぼしが少ないといえる. 
+
+\vspace{10truept}
+
+\begin{table}[ht]
+    \centering
+    \caption{豚汁(TF-IDF)のConfusion Matrix (正解ラベルと同数のラベル付与)}
+    \vspace{5truept}
+
+    \includegraphics[width = 12cm]{images/豚汁images/豚汁Confusion_TF-IDF同件数.drawio.png}
+    \label{table:豚汁(TF-IDF)のconfusion同件数}
+\end{table}
+\vspace{10truept}
+
+表\ref{table:豚汁(TF-IDF)のconfusion同件数}より, TF-IDFを用いて類似度計算をしたデータを用いた場合の全体の正解率は
+Accuracy=0.665914であり, 「みそきん」と同様にBERTを用いた手法よりも正解率が下がることが分かった. 
+他の指標もBERTを用いた手法より少し低い結果となったが, 「みそきん」の同じ条件の結果と比較すると10\%程度高くなっているため, 
+文章生成がより自然で短いことが重要であると考えられる. \\
+
+次に, 各類似度計算法によって計算した文章間の類似度の上位25\%, 50\%, 75\%に対して「関連性-高」のラベルを付与して
+同様の実験を行った結果を表\ref{table:豚汁BERT閾値}に示す. 
+Accuracyを見ると, 閾値をどの値に設定しても全体的な正解率は50\%を超えていて, 閾値を下げたときの正解率の上昇率が「みそきん」の結果
+(表\ref{table:みそBERT閾値})よりも高くなっていることが分かる. 
+Precisionは閾値を低く設定するにつれて値が低くなるが, 一番低い75\%の場合でも0.76あり, どの閾値に設定した場合でも
+提案手法で予測したコメントのうち約7.6割以上が正解していることが分かる. 
+閾値を低く設定するにつれてPrecisionが低くなるのは, 誤って「関連性-高」と判断するコメントが増えるからであると考えられる. 
+Precisonとは逆にRecallは閾値を低く設定するにつれて値が高くなった. 
+これは「関連性-高」と判断するコメントが多くなると, その取りこぼし(「関連性-高」を「関連性-低」と判断する事象)
+が少なくなるからであると考えられる. 
+Recallの値は閾値25\%のときに約3割であり, 提案手法の性能としては満足できない結果であるが, 
+閾値75\%のときは約8.5割で取りこぼしなく関連性があるコメントを抽出できていることが分かる. 
+F1-measureを含め, 全ての指標で「みそきん」の結果よりも上回っていることが分かり, 改めて単語抽出と文章生成の結果が重要であると考えられる. 
+
+\vspace{10truept}
+
+\begin{table}[ht]
+    \centering
+    \caption{「関連性-高」の閾値を上位25\%, 50\%, 75\%に設定した結果(BERT)}
+    \vspace{5truept}
+
+    \includegraphics[width = 14cm]{images/豚汁images/豚汁BERT閾値.drawio.png}
+    \label{table:豚汁BERT閾値}
+\end{table}
+\vspace{10truept}
+
+次に, TF-IDFを用いた類似度計算したデータに閾値を設定してラベルを付与した結果から計算したConfusion Matrixの各指標を表\ref{table:豚汁TF-IDF閾値}
+に示す. BERTでの結果(表\ref{table:豚汁BERT閾値})と比較すると, 「みそきん」と同様に対応している全ての指標が低いことが分かる. 
 
 
+\vspace{10truept}
 
+\begin{table}[ht]
+    \centering
+    \caption{「関連性-高」の閾値を上位25\%, 50\%, 75\%に設定した結果(TF-IDF)}
+    \vspace{5truept}
 
+    \includegraphics[width = 14cm]{images/豚汁images/豚汁TF-IDF閾値.drawio.png}
+    \label{table:豚汁TF-IDF閾値}
+\end{table}
 
 
 
