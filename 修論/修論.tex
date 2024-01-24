@@ -1759,9 +1759,22 @@ ChatGPTに入力したプロンプトは以下の通りである.  「豚汁」�
 \end{table}
 
 \subsubsection{二種の類似度計算法による結果}
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 13cm]{images/豚汁images/豚汁類似度BERT.png}
+    \caption{BERTによる類似度計算結果}
+    \label{fig:豚汁類似度BERT}
+\end{figure}
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 13cm]{images/豚汁images/豚汁類似度TF-IDF.png}
+    \caption{TF-IDFによる類似度計算結果}
+    \label{fig:豚汁類似度TF-IDF}
+\end{figure}
 
-
+\newpage
 \subsubsection{提案手法の精度検証結果}
 文章間の類似度を計算し, その値が高いコメントを「商品(豚汁のレシピ)との関連性がある」と判断するという仮説を検証するため, 
 人手でアノテーションして正解ラベルを付与したデータと比較して分析を行う. 
@@ -1864,6 +1877,9 @@ F1-measureを含め, 全ての指標で「みそきん」の結果よりも上�
 
 次に, TF-IDFを用いた類似度計算したデータに閾値を設定してラベルを付与した結果から計算したConfusion Matrixの各指標を表\ref{table:豚汁TF-IDF閾値}
 に示す. BERTでの結果(表\ref{table:豚汁BERT閾値})と比較すると, 「みそきん」と同様に対応している全ての指標が低いことが分かる. 
+ここまでの実験でBERTを用いた類似度計算法による結果がTF-IDFを用いた類似度計算による結果を全て上回っているため, 
+本提案手法ではBERTによる文章のベクトル化の方が優れているといえる. ただし, 元コメントの文章数や文章の長さによって
+結果が変わる可能性があるため, 今後様々な条件を持つコメント集合に対して実験を行う必要がある. 
 
 
 \vspace{10truept}

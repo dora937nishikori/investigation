@@ -33,8 +33,8 @@
 \contentsline {subsubsection}{\numberline {6.2.1}BTMによって抽出した単語リスト}{41}{subsubsection.6.2.1}%
 \contentsline {subsubsection}{\numberline {6.2.2}文章生成}{41}{subsubsection.6.2.2}%
 \contentsline {subsubsection}{\numberline {6.2.3}二種の類似度計算法による結果}{42}{subsubsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.4}提案手法の精度検証結果}{42}{subsubsection.6.2.4}%
-\contentsline {subsection}{\numberline {6.3}考察}{46}{subsection.6.3}%
-\contentsline {part}{第IV部\hspace {1\zw }おわりに}{47}{part.4}%
-\contentsline {section}{\numberline {7}まとめ}{47}{section.7}%
-\contentsline {section}{\numberline {8}今後の展望}{47}{section.8}%
+\contentsline {subsubsection}{\numberline {6.2.4}提案手法の精度検証結果}{44}{subsubsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.3}考察}{47}{subsection.6.3}%
+\contentsline {part}{第IV部\hspace {1\zw }おわりに}{48}{part.4}%
+\contentsline {section}{\numberline {7}まとめ}{48}{section.7}%
+\contentsline {section}{\numberline {8}今後の展望}{48}{section.8}%
