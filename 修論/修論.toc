@@ -1,44 +1,44 @@
-\contentsline {part}{第I部\hspace {1\zw }はじめに}{5}{part.1}%
-\contentsline {section}{\numberline {1}研究背景}{5}{section.1}%
-\contentsline {section}{\numberline {2}関連研究}{6}{section.2}%
-\contentsline {subsection}{\numberline {2.1}機械学習を用いた自然言語処理による商品レビューの評価(市川[1])}{6}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}単語の出現頻度と類似性に基づいたトピックモデル洗練化手法(東[2])}{8}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}テキストマイニングを用いた口コミ分析による点数評価の信頼性確認手法(谷口[3])}{10}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}グルメサイトにおけるクチコミの信頼性確保に関する一考察(吉見[4])}{12}{subsection.2.4}%
-\contentsline {section}{\numberline {3}研究目的}{13}{section.3}%
-\contentsline {part}{第II部\hspace {1\zw }提案手法}{14}{part.2}%
-\contentsline {section}{\numberline {4}トピックモデル}{14}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Latent Dirichlet Allocation}{16}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Biterm Topic Model}{17}{subsection.4.2}%
-\contentsline {section}{\numberline {5}提案手法}{19}{section.5}%
-\contentsline {subsection}{\numberline {5.1}データ収集}{19}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}前処理手法}{20}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}クリーニング処理}{20}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}MeCabによる形態素解析及び分かち書き}{21}{subsubsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.3}BTMによるトピック抽出}{23}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}文章生成}{24}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}文章間の類似度計算}{25}{subsection.5.5}%
-\contentsline {subsubsection}{\numberline {5.5.1}TF-IDF}{25}{subsubsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.2}BERT}{26}{subsubsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.6}提案手法の精度検証}{27}{subsection.5.6}%
-\contentsline {part}{第III部\hspace {1\zw }実験}{31}{part.3}%
-\contentsline {section}{\numberline {6}実データを用いた実験結果と考察}{31}{section.6}%
-\contentsline {subsection}{\numberline {6.1}みそきん(カップラーメン)の紹介動画}{31}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}BTMによって抽出した単語リスト}{32}{subsubsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.2}文章生成}{32}{subsubsection.6.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.3}二種の類似度計算法による結果}{33}{subsubsection.6.1.3}%
-\contentsline {subsubsection}{\numberline {6.1.4}提案手法の精度検証結果}{36}{subsubsection.6.1.4}%
-\contentsline {subsubsection}{\numberline {6.1.5}LDAとの比較}{39}{subsubsection.6.1.5}%
-\contentsline {subsection}{\numberline {6.2}豚汁のレシピ紹介動画}{40}{subsection.6.2}%
-\contentsline {subsubsection}{\numberline {6.2.1}BTMによって抽出した単語リスト}{41}{subsubsection.6.2.1}%
-\contentsline {subsubsection}{\numberline {6.2.2}文章生成}{41}{subsubsection.6.2.2}%
-\contentsline {subsubsection}{\numberline {6.2.3}二種の類似度計算法による結果}{42}{subsubsection.6.2.3}%
-\contentsline {subsubsection}{\numberline {6.2.4}提案手法の精度検証結果}{45}{subsubsection.6.2.4}%
-\contentsline {section}{\numberline {7}考察}{48}{section.7}%
-\contentsline {subsection}{\numberline {7.1}BTMの優位性についての考察}{48}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}文章生成に関する仮説の検証}{48}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}類似度計算方法の考察}{48}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}提案手法の有用性についての考察}{49}{subsection.7.4}%
-\contentsline {part}{第IV部\hspace {1\zw }おわりに}{50}{part.4}%
-\contentsline {section}{\numberline {8}まとめ}{50}{section.8}%
-\contentsline {section}{\numberline {9}今後の展望}{50}{section.9}%
+\contentsline {part}{第I部\hspace {1\zw }はじめに}{4}{part.1}%
+\contentsline {section}{\numberline {1}研究背景}{4}{section.1}%
+\contentsline {section}{\numberline {2}関連研究}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}機械学習を用いた自然言語処理による商品レビューの評価(市川(2021)[1])}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}単語の出現頻度と類似性に基づいたトピックモデル洗練化手法(東(2019)[2])}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}テキストマイニングを用いた口コミ分析による点数評価の信頼性確認手法(谷口(2017)[3])}{9}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}グルメサイトにおけるクチコミの信頼性確保に関する一考察(吉見(2014)[4])}{11}{subsection.2.4}%
+\contentsline {section}{\numberline {3}研究目的}{12}{section.3}%
+\contentsline {part}{第II部\hspace {1\zw }提案手法}{13}{part.2}%
+\contentsline {section}{\numberline {4}トピックモデル}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Latent Dirichlet Allocation}{15}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Biterm Topic Model}{16}{subsection.4.2}%
+\contentsline {section}{\numberline {5}提案手法}{18}{section.5}%
+\contentsline {subsection}{\numberline {5.1}データ収集}{18}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}前処理手法}{19}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}クリーニング処理}{19}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}MeCabによる形態素解析及び分かち書き}{20}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}BTMによるトピック抽出}{22}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}文章生成}{23}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}文章間の類似度計算}{24}{subsection.5.5}%
+\contentsline {subsubsection}{\numberline {5.5.1}TF-IDF}{24}{subsubsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.2}BERT}{25}{subsubsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.6}提案手法の精度検証}{26}{subsection.5.6}%
+\contentsline {part}{第III部\hspace {1\zw }実験}{30}{part.3}%
+\contentsline {section}{\numberline {6}実データを用いた実験結果と考察}{30}{section.6}%
+\contentsline {subsection}{\numberline {6.1}みそきん(カップラーメン)の紹介動画}{30}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}BTMによって抽出した単語リスト}{31}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}文章生成}{31}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}二種の類似度計算法による結果}{32}{subsubsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.4}提案手法の精度検証結果}{35}{subsubsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.5}LDAとの比較}{38}{subsubsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.2}豚汁のレシピ紹介動画}{39}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}BTMによって抽出した単語リスト}{40}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}文章生成}{40}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}二種の類似度計算法による結果}{41}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}提案手法の精度検証結果}{44}{subsubsection.6.2.4}%
+\contentsline {section}{\numberline {7}考察}{47}{section.7}%
+\contentsline {subsection}{\numberline {7.1}BTMの優位性についての考察}{47}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}文章生成に関する仮説の検証}{47}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}類似度計算方法の考察}{47}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}提案手法の有用性についての考察}{48}{subsection.7.4}%
+\contentsline {part}{第IV部\hspace {1\zw }おわりに}{49}{part.4}%
+\contentsline {section}{\numberline {8}まとめ}{49}{section.8}%
+\contentsline {section}{\numberline {9}今後の展望}{49}{section.9}%
