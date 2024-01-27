@@ -41,4 +41,4 @@
 \contentsline {subsection}{\numberline {7.4}提案手法の有用性についての考察}{49}{subsection.7.4}%
 \contentsline {part}{第IV部\hspace {1\zw }おわりに}{50}{part.4}%
 \contentsline {section}{\numberline {8}まとめ}{50}{section.8}%
-\contentsline {section}{\numberline {9}今後の展望}{51}{section.9}%
+\contentsline {section}{\numberline {9}今後の課題}{51}{section.9}%
