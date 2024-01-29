@@ -4,7 +4,7 @@ import pandas as pd
 
 def main():
     # テキストファイルの読み込み
-    file_path = 'remove_pre_misokin_original.txt'
+    file_path = 'remove_pre_豚汁元コメント.txt'
     with open(file_path, 'r', encoding='utf-8') as file:
         documents = file.readlines()
 
@@ -20,8 +20,8 @@ def main():
     # LDAモデルの構築とトレーニング
     num_topics = 5  # トピック数
     num_words = 10  # 各トピックの上位単語数
-    alpha = 0.01    # トピックの事前分布に対するパラメータ
-    eta = 0.01      # 単語の事前分布に対するパラメータ
+    alpha = 1   # トピックの事前分布に対するパラメータ
+    eta = 1      # 単語の事前分布に対するパラメータ
 
     lda_model = gensim.models.LdaMulticore(corpus, num_topics=num_topics, id2word=dictionary, passes=15, alpha=alpha, eta=eta)
 
