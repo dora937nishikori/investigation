@@ -8,7 +8,7 @@ import tmplot as tmp
 
 # IMPORTING DATA
 df = pd.read_csv(
-    'remove_pre_豚汁元コメント.txt', header=None, names=['texts'])
+    'remove_pre_ボールペン元コメント.txt', header=None, names=['texts'])
 texts = df['texts'].str.strip().tolist()
 
 # PREPROCESSING
