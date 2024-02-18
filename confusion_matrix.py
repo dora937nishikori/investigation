@@ -3,7 +3,7 @@ from sklearn.metrics import confusion_matrix, accuracy_score, precision_score, r
 
 
 # CSVファイルの読み込み
-df = pd.read_csv('豚汁\LDA2\LDA豚汁類似度TF-IDF同件数.csv', header=None)
+df = pd.read_csv('ボールペン\TF-IDF\BTMボールペン類似度TF-IDF_75%.csv', header=None)
 y_true = df[0]  # 正解ラベル一列目
 y_pred = df[1]  # 予測ラベル二列目
 
