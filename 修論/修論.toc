@@ -38,11 +38,12 @@
 \contentsline {subsubsection}{\numberline {6.3.1}BTMによって抽出した単語リスト}{48}{subsubsection.6.3.1}%
 \contentsline {subsubsection}{\numberline {6.3.2}文章生成}{49}{subsubsection.6.3.2}%
 \contentsline {subsubsection}{\numberline {6.3.3}二種の類似度計算法による結果}{50}{subsubsection.6.3.3}%
-\contentsline {section}{\numberline {7}考察}{51}{section.7}%
-\contentsline {subsection}{\numberline {7.1}BTMの優位性についての考察}{51}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}文章生成に関する仮説の検証}{51}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}類似度計算方法の考察}{51}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}提案手法の有用性についての考察}{52}{subsection.7.4}%
-\contentsline {part}{第IV部\hspace {1\zw }おわりに}{53}{part.4}%
-\contentsline {section}{\numberline {8}まとめ}{53}{section.8}%
-\contentsline {section}{\numberline {9}今後の課題}{54}{section.9}%
+\contentsline {subsubsection}{\numberline {6.3.4}提案手法の精度検証結果}{53}{subsubsection.6.3.4}%
+\contentsline {section}{\numberline {7}考察}{54}{section.7}%
+\contentsline {subsection}{\numberline {7.1}BTMの優位性についての考察}{54}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}文章生成に関する仮説の検証}{54}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}類似度計算方法の考察}{54}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}提案手法の有用性についての考察}{55}{subsection.7.4}%
+\contentsline {part}{第IV部\hspace {1\zw }おわりに}{56}{part.4}%
+\contentsline {section}{\numberline {8}まとめ}{56}{section.8}%
+\contentsline {section}{\numberline {9}今後の課題}{57}{section.9}%

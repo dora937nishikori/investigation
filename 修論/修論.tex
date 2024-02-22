@@ -2151,6 +2151,7 @@ ChatGPTに入力したプロンプトは以下の通りである.  「極細ボ�
 \vspace{10truept}
 
 \subsubsection{二種の類似度計算法による結果}
+%%%%
 ChatGPT(GPT-4)で生成した文章と, 前処理を施した元のYouTubeのコメントとの文章間の類似度を計算した結果を述べる. 
 「みそきん」と同様にBERTとTF-IDFによる文章のベクトル化を用いてCos類似度を計算し, 二つの手法がどのような特徴を
 持っているかを考察する. 
@@ -2164,6 +2165,169 @@ ChatGPT(GPT-4)で生成した文章と, 前処理を施した元のYouTubeのコ
 表\ref{table:豚汁類似度結果TF-IDF}では長さが短い文章のときに類似度が低くなってしまっているが, 
 同じコメントに対して表\ref{table:豚汁類似度結果BERT}では類似度が高く算出されている. 
 この結果より, BERTを用いた手法の方が短い文章でも適切に文章間の類似度を測れているといえる. 
+%%%%
+
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 14.5cm]{images/ボールペンimages/BERT類似度.png}
+    \caption{BERTによる類似度計算結果}
+    \label{fig:ボールペン類似度BERT}
+\end{figure}
+\vspace{30truept}
+
+\begin{table}[ht]
+    \caption{BERTによる類似度計算結果の一例}
+    \vspace{5truept}
+
+    \centering
+    \begin{tabular}{|r|l|}
+        \hline
+        類似度結果 & 前処理済みの元コメント\\
+        \hline\hline
+        0.955579638 & 
+        \begin{tabular}{l}
+            このレシピのお陰で豚肉入り味噌汁から卒業出来ました流石至高ですね\\美味しいし娘に伝授します\\
+        \end{tabular}\\
+        \hline
+        0.945638359 & 
+        \begin{tabular}{l}
+            今日このレシピで豚汁作ったら家族に大好評でしたすごく美味しかったです\\
+        \end{tabular}\\
+        \hline
+        0.938940465 & 
+        \begin{tabular}{l}
+            ほんとに美味しい最後のニンニク最高今からの季節これで決まりいつも\\美味しいレシピありがとうございます\\
+        \end{tabular}\\
+        \hline
+        0.93707478 & 
+        \begin{tabular}{l}
+            ゴボウがこんなに美味しいなんて豚汁のごぼうは鬼門だったのですが香り\\高くて味が染みて豚の脂も味噌も吸って美味しい目からウロコでした\\ゴボウ探して食べました至高シリーズまた待ってます\\
+        \end{tabular}\\
+        \hline
+        0.930768073 & 
+        \begin{tabular}{l}
+            これは美味いニンニクと生姜が良かったです\\
+        \end{tabular}\\
+        \hline
+        0.92407757 & 
+        \begin{tabular}{l}
+            これ本当に美味しくてリピートしまくってます\\
+        \end{tabular}\\
+        \hline
+        0.886364281 & 
+        \begin{tabular}{l}
+            さつまいも入れても美味しかった\\
+        \end{tabular}\\
+        \hline
+        0.842903078 & 
+        \begin{tabular}{l}
+            ニンニクが強いかも\\
+        \end{tabular}\\
+        \hline
+    \end{tabular}
+    \label{table:ボールペン類似度結果BERT}
+\end{table}
+
+\newpage
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width = 14.5cm]{images/ボールペンimages/TF-IDF類似度.png}
+    \caption{BERTによる類似度計算結果}
+    \label{fig:ボールペン類似度TF-IDF}
+\end{figure}
+\vspace{30truept}
+
+\begin{table}[ht]
+    \caption{BERTによる類似度計算結果の一例}
+    \vspace{5truept}
+
+    \centering
+    \begin{tabular}{|r|l|}
+        \hline
+        類似度結果 & 前処理済みの元コメント\\
+        \hline\hline
+        0.955579638 & 
+        \begin{tabular}{l}
+            このレシピのお陰で豚肉入り味噌汁から卒業出来ました流石至高ですね\\美味しいし娘に伝授します\\
+        \end{tabular}\\
+        \hline
+        0.945638359 & 
+        \begin{tabular}{l}
+            今日このレシピで豚汁作ったら家族に大好評でしたすごく美味しかったです\\
+        \end{tabular}\\
+        \hline
+        0.938940465 & 
+        \begin{tabular}{l}
+            ほんとに美味しい最後のニンニク最高今からの季節これで決まりいつも\\美味しいレシピありがとうございます\\
+        \end{tabular}\\
+        \hline
+        0.93707478 & 
+        \begin{tabular}{l}
+            ゴボウがこんなに美味しいなんて豚汁のごぼうは鬼門だったのですが香り\\高くて味が染みて豚の脂も味噌も吸って美味しい目からウロコでした\\ゴボウ探して食べました至高シリーズまた待ってます\\
+        \end{tabular}\\
+        \hline
+        0.930768073 & 
+        \begin{tabular}{l}
+            これは美味いニンニクと生姜が良かったです\\
+        \end{tabular}\\
+        \hline
+        0.92407757 & 
+        \begin{tabular}{l}
+            これ本当に美味しくてリピートしまくってます\\
+        \end{tabular}\\
+        \hline
+        0.886364281 & 
+        \begin{tabular}{l}
+            さつまいも入れても美味しかった\\
+        \end{tabular}\\
+        \hline
+        0.842903078 & 
+        \begin{tabular}{l}
+            ニンニクが強いかも\\
+        \end{tabular}\\
+        \hline
+    \end{tabular}
+    \label{table:ボールペン類似度結果TF-IDF}
+\end{table}
+\newpage
+\subsubsection{提案手法の精度検証結果}
+文章間の類似度を計算し, その値が高いコメントを「商品(極細ボールペン)との関連性がある」と判断するという仮説を検証するため, 
+人手でアノテーションして正解ラベルを付与したデータと比較して分析を行う. 
+「極細ボールペン」のコメントに対するアノテーションは以下の基準で行った. アノテーションを行った結果, 「関連性-高」のラベルが付与された
+コメントが154件, 「関連性-低」のラベルが付与されたコメントが116件であった. 
+\vspace{10truept}
+
+\begin{description}
+    \item[関連性-高]\mbox{}
+    \begin{itemize}
+        \item 紹介している極細ボールペンに直接関係するコメント(例：デザイン, 細さ, 値段など)
+        \item 実際に使用した感想(例：書き心地, 握りやすさなど)
+        \item 他のボールペンとの比較(例：値段が高い, 使いやすさなど)
+    \end{itemize}
+    \item[関連性-低] \mbox{}
+    \begin{itemize}
+        \item ボールペンには関係ないが動画には関係しているコメント(例：このシリーズ面白いなど)
+        \item 商品を紹介している人に対するコメント(例：ブッコロー(キャラ)についてなど)
+        \item その他全く関係ないコメント
+    \end{itemize}
+\end{description}
+\vspace{10truept}
+
+%%%%%
+人手でアノテーションし正解ラベルを付与したデータと, 提案手法によって類似度を計算したコメントを比較し, 
+提案手法の精度, 及び仮説の検証を行う. 
+提案手法では類似度を計算しただけであり, 商品との関連性が高いと言える閾値は設定されていない. 
+そのため, 類似度上位のコメントに対して, 人手で「関連性-高」のラベルを付与した数と同じ数のコメントだけ
+「関連性-高」のラベルを付与する. 
+それ以下の類似度のコメントには「関連性-低」のラベルを付与する. 
+「豚汁」の場合, 正解ラベルは「関連性-高」が882件, 「関連性-低」が447件であり, 同じ数だけラベル付けした
+データを用いて, 二値分類のConfusion Matrixを計算する. 
+また, 「みそきん」と同様に類似度上位25\%, 50\%, 75\%を閾値として「関連性-高」のラベル
+を付与したデータを作成し, 同様にConfusion Matrixを計算することで提案手法の精度をより深く考察する. 
+%%%%
+
+
 
 
 
