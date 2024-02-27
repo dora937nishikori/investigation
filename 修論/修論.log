@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  22 FEB 2024 16:02
+This is LuaHBTeX, Version 1.16.0 (TeX Live 2023)  (format=lualatex 2023.11.1)  28 FEB 2024 00:29
  restricted system commands enabled.
 **c:/Users/937do/Documents/investigation/修論/修論
 (c:/Users/937do/Documents/investigation/修論/修論.tex
@@ -1025,23 +1025,45 @@ File: images/豚汁images/豚汁TF-IDF閾値.drawio.png Graphic file (type png)
 Package luatex.def Info: images/豚汁images/豚汁TF-IDF閾値.drawio.png  used on input line 2016.
 (luatex.def)             Requested size: 384.1122pt x 118.8735pt.
  [47<./images/豚汁images/豚汁BERT閾値.drawio.png><./images/豚汁images/豚汁TF-IDF閾値.drawio.png>] [48] [49] [50]
-<images/ボールペンimages/BERT類似度.png, id=780, 462.22687pt x 259.7203pt>
+<images/ボールペンimages/BERT類似度.png, id=784, 462.22687pt x 259.7203pt>
 File: images/ボールペンimages/BERT類似度.png Graphic file (type png)
 <use images/ボールペンimages/BERT類似度.png>
-Package luatex.def Info: images/ボールペンimages/BERT類似度.png  used on input line 2173.
-(luatex.def)             Requested size: 412.56496pt x 231.81612pt.
+Package luatex.def Info: images/ボールペンimages/BERT類似度.png  used on input line 2174.
+(luatex.def)             Requested size: 372.73126pt x 209.43306pt.
  [51<./images/ボールペンimages/BERT類似度.png>]
-<images/ボールペンimages/TF-IDF類似度.png, id=788, 467.49657pt x 261.22594pt>
+<images/ボールペンimages/TF-IDF類似度.png, id=790, 467.49657pt x 261.22594pt>
 File: images/ボールペンimages/TF-IDF類似度.png Graphic file (type png)
 <use images/ボールペンimages/TF-IDF類似度.png>
-Package luatex.def Info: images/ボールペンimages/TF-IDF類似度.png  used on input line 2235.
-(luatex.def)             Requested size: 412.56496pt x 230.54118pt.
- [52<./images/ボールペンimages/TF-IDF類似度.png>] [53] [54] [55] [56] [57]
+Package luatex.def Info: images/ボールペンimages/TF-IDF類似度.png  used on input line 2231.
+(luatex.def)             Requested size: 369.88582pt x 206.69305pt.
+ [52<./images/ボールペンimages/TF-IDF類似度.png>] [53]
+<images/ボールペンimages/BERT同件数.drawio.png, id=806, 1798.72pt x 1180.41pt>
+File: images/ボールペンimages/BERT同件数.drawio.png Graphic file (type png)
+<use images/ボールペンimages/BERT同件数.drawio.png>
+Package luatex.def Info: images/ボールペンimages/BERT同件数.drawio.png  used on input line 2336.
+(luatex.def)             Requested size: 327.20668pt x 214.71608pt.
+<images/ボールペンimages/TF-IDF同件数.drawio.png, id=808, 1798.72pt x 1180.41pt>
+File: images/ボールペンimages/TF-IDF同件数.drawio.png Graphic file (type png)
+<use images/ボールペンimages/TF-IDF同件数.drawio.png>
+Package luatex.def Info: images/ボールペンimages/TF-IDF同件数.drawio.png  used on input line 2350.
+(luatex.def)             Requested size: 327.20668pt x 214.71608pt.
+ [54<./images/ボールペンimages/BERT同件数.drawio.png><./images/ボールペンimages/TF-IDF同件数.drawio.png>]
+<images/ボールペンimages/BERT閾値.drawio.png, id=819, 2413.015pt x 746.79pt>
+File: images/ボールペンimages/BERT閾値.drawio.png Graphic file (type png)
+<use images/ボールペンimages/BERT閾値.drawio.png>
+Package luatex.def Info: images/ボールペンimages/BERT閾値.drawio.png  used on input line 2375.
+(luatex.def)             Requested size: 384.1122pt x 118.8735pt.
+<images/ボールペンimages/TF-IDF閾値.drawio.png, id=822, 2413.015pt x 746.79pt>
+File: images/ボールペンimages/TF-IDF閾値.drawio.png Graphic file (type png)
+<use images/ボールペンimages/TF-IDF閾値.drawio.png>
+Package luatex.def Info: images/ボールペンimages/TF-IDF閾値.drawio.png  used on input line 2395.
+(luatex.def)             Requested size: 384.1122pt x 118.8735pt.
+ [55<./images/ボールペンimages/BERT閾値.drawio.png><./images/ボールペンimages/TF-IDF閾値.drawio.png>] [56] [57] [58] [59]
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 19.95642pt on input line 2431.
+(Font)              scaled to size 19.95642pt on input line 2497.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 19.95642pt on input line 2431.
- [58] [59] (./修論.aux)
+(Font)              scaled to size 19.95642pt on input line 2497.
+ [60] [61] (./修論.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
@@ -1051,19 +1073,19 @@ Package rerunfilecheck Info: File `修論.out' has not changed.
 )
 
 Here is how much of LuaTeX's memory you used:
- 14946 strings out of 476729
- 305804,1977958 words of node,token memory allocated
- 2943 words of node memory still in use:
-   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 1050 attribute, 59 glue_spec, 107 attribute_list, 1 write, 14 user_defined, 1 pdf_action nodes
-   avail lists: 1:52,2:80200,3:760,4:578,5:229,6:135,7:7596,8:73,9:3437,10:45,11:98
- 36102 multiletter control sequences out of 65536+600000
+ 14996 strings out of 476729
+ 244642,1977958 words of node,token memory allocated
+ 3015 words of node memory still in use:
+   11 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 1083 attribute, 59 glue_spec, 110 attribute_list, 1 write, 14 user_defined, 1 pdf_action nodes
+   avail lists: 1:51,2:70489,3:760,4:578,5:229,6:135,7:7596,8:73,9:3437,10:45,11:98
+ 36134 multiletter control sequences out of 65536+600000
  62 fonts using 56571135 bytes
  125i,14n,128p,1806b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiGothic-Medium.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman17-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf><c:/texlive/2023/texmf-dist/fonts/opentype/public/haranoaji/HaranoAjiMincho-Regular.otf><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on 修論.pdf (60 pages, 3031812 bytes).
+Output written on 修論.pdf (62 pages, 3419491 bytes).
 
-PDF statistics: 929 PDF objects out of 1000 (max. 8388607)
- 751 compressed objects within 8 object streams
- 208 named destinations out of 1000 (max. 131072)
+PDF statistics: 961 PDF objects out of 1000 (max. 8388607)
+ 773 compressed objects within 8 object streams
+ 214 named destinations out of 1000 (max. 131072)
  393 words of extra memory for PDF output out of 10000 (max. 100000000)
 
